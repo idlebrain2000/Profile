@@ -1,9 +1,12 @@
-/* posts.js — hydrates the Write tab with live Substack posts from /api/posts.
-   Progressive enhancement: if the API is slow, down, or blocked, the hard-coded
-   cards already in index.html stay exactly as they are. Nothing ever looks broken. */
+/* posts.js — fills the Ground Truth section with live Substack essays from /api/posts.
+   Renders each essay with its cover image, title, date and subtitle.
+   Progressive enhancement: if the API is unreachable, the fallback essays hard-coded
+   in index.html stay put. The page never looks broken. */
 (function () {
-  var list = document.querySelector('#write .articles');
+  var list = document.querySelector('#write .essays');
   if (!list) return;
+
+  var LIMIT = 6; // newest N on the homepage; the rest live on Substack
 
   var esc = function (s) {
     return String(s == null ? '' : s)
@@ -11,54 +14,41 @@
       .replace(/"/g, '&quot;');
   };
 
-  var card = function (p, i, open) {
-    var num = String(i + 1).padStart(2, '0');
-    var tags = (p.tags || []).map(function (t) {
-      return '<span class="atag">' + esc(t) + '</span>';
-    }).join('');
+  // Substack's CDN honours Cloudinary transforms without breaking the URL signature —
+  // ask for a 200px square crop instead of pulling the full 2816px original. Verified.
+  var thumb = function (url) {
+    if (!url) return '';
+    return url.replace('f_auto,q_auto:good', 'w_200,h_200,c_fill,f_auto,q_auto:good');
+  };
+
+  var row = function (p) {
+    var img = p.image
+      ? '<img class="essay-img" src="' + esc(thumb(p.image)) + '" alt="" loading="lazy" ' +
+        'onerror="this.style.display=\'none\'">'
+      : '';
 
     return '' +
-      '<div class="acard' + (open ? ' on' : '') + '" onclick="toggleArticle(this)">' +
-        '<div class="acard-top">' +
-          '<span class="anum">' + num + '</span>' +
-          '<div class="atitle" style="flex:1;">' + esc(p.title) + '</div>' +
-          '<span class="adate">' + esc(p.date) + '</span>' +
+      '<a class="essay" href="' + esc(p.link) + '" target="_blank" rel="noopener">' +
+        img +
+        '<div class="essay-body">' +
+          '<div class="essay-top">' +
+            '<div class="essay-t">' + esc(p.title) + '</div>' +
+            '<div class="essay-d">' + esc(p.date) + '</div>' +
+          '</div>' +
+          (p.subtitle ? '<div class="essay-s">' + esc(p.subtitle) + '</div>' : '') +
         '</div>' +
-        (p.subtitle ? '<div class="asub">' + esc(p.subtitle) + '</div>' : '') +
-        '<div class="abody">' +
-          (tags ? '<div class="atags">' + tags + '</div>' : '') +
-          (p.summary ? '<div class="adesc">' + esc(p.summary) + '</div>' : '') +
-          (p.quote ? '<div class="apq">"' + esc(p.quote) + '"</div>' : '') +
-          '<a class="alink" href="' + esc(p.link) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' +
-            '<i class="ti ti-external-link"></i> Read on Substack</a>' +
-        '</div>' +
-      '</div>';
+      '</a>';
   };
 
   fetch('/api/posts')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (!data || !data.ok || !data.posts || !data.posts.length) return;
-      var posts = data.posts;
 
-      list.innerHTML = posts.map(function (p, i) { return card(p, i, i === 0); }).join('');
+      list.innerHTML = data.posts.slice(0, LIMIT).map(row).join('');
 
-      // Keep the intro copy honest about how many essays are actually live.
-      var lbl = document.querySelector('#write .ibox .ibox-lbl');
-      if (lbl && /thread connecting/i.test(lbl.textContent)) {
-        lbl.textContent = 'The thread connecting all ' + posts.length;
-      }
-
-      // Live badge next to the section header.
-      var secLink = document.querySelector('#write .sec-hd .sec-link');
-      if (secLink && !document.getElementById('gt-count')) {
-        var span = document.createElement('span');
-        span.id = 'gt-count';
-        span.className = 'sec-lbl';
-        span.style.color = 'var(--green-dark)';
-        span.textContent = posts.length + ' essays · synced';
-        secLink.parentNode.insertBefore(span, secLink);
-      }
+      var more = document.querySelector('#write .more');
+      if (more) more.textContent = 'All ' + data.posts.length + ' essays on Substack →';
     })
-    .catch(function () { /* keep the static cards */ });
+    .catch(function () { /* keep the fallback essays */ });
 })();

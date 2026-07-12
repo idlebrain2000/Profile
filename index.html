@@ -3,1133 +3,871 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Srinivas Mullapudi — AI Product Executive. 20+ years building AI-native platforms. Director PM at Highspot. Builder, writer, thinker.">
-<meta property="og:title" content="Srinivas Mullapudi — AI Product Executive">
-<meta property="og:description" content="20+ years leading AI platforms. Hands-on builder. Writing the AI PM Gita. Director PM at Highspot.">
+<meta name="description" content="Srinivas Mullapudi — AI product leader and builder. Twenty years of enterprise platforms. Writes Ground Truth. Coaches and mentors product leaders.">
+<meta property="og:title" content="Srinivas Mullapudi — Product Leader &amp; Builder">
+<meta property="og:description" content="I ship AI, write about it, and build with the same tools my teams use. Open to Director / VP Product and Head of AI roles in India and the US.">
 <meta name="twitter:card" content="summary_large_image">
 <title>Srinivas Mullapudi — AI Product Executive</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --green: #1D9E75;
-    --green-dark: #0F6E56;
-    --green-darker: #085041;
-    --green-light: #E1F5EE;
-    --green-mid: #9FE1CB;
-    --green-border: #5DCAA5;
-    --bg: #ffffff;
-    --bg-secondary: #f7f7f5;
-    --text: #1a1a18;
-    --text-2: #5a5a55;
-    --text-3: #9a9a93;
-    --border: rgba(0,0,0,0.1);
-    --border-2: rgba(0,0,0,0.18);
-    --radius: 12px;
-    --radius-sm: 8px;
+    --green:        #0F6E56;
+    --green-bright: #1D9E75;
+    --bg:           #FCFBF8;
+    --bg-2:         #F3F1EB;
+    --text:         #14140F;
+    --text-2:       #55554D;
+    --text-3:       #8E8E84;
+    --rule:         rgba(20,20,15,.13);
+    --measure:      680px;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #111110;
-      --bg-secondary: #1a1a18;
-      --text: #f0efea;
-      --text-2: #a0a099;
-      --text-3: #606059;
-      --border: rgba(255,255,255,0.1);
-      --border-2: rgba(255,255,255,0.18);
-      --green-light: #0a2a1f;
-      --green-mid: #0d4a35;
-      --green-border: #1D9E75;
+      --green:        #4FD3A5;
+      --green-bright: #4FD3A5;
+      --bg:           #0E0E0C;
+      --bg-2:         #171714;
+      --text:         #F2F0E9;
+      --text-2:       #9E9E94;
+      --text-3:       #6A6A62;
+      --rule:         rgba(255,255,255,.13);
     }
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: 'Outfit', sans-serif;
+    font-weight: 300;
     background: var(--bg);
     color: var(--text);
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.62;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   a { color: inherit; text-decoration: none; }
 
-  /* ── LAYOUT ── */
-  .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
 
-  /* ── HERO ── */
-  .hero {
-    padding: 3.5rem 0 2.5rem;
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--text-3);
-    margin-bottom: .9rem;
-  }
-
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(36px, 6vw, 52px);
-    line-height: 1.05;
-    margin-bottom: .6rem;
-  }
-
-  .hero-name em {
-    font-style: italic;
-    color: var(--green);
-  }
-
-  .tagline {
-    font-size: 15px;
-    color: var(--text-2);
-    max-width: 600px;
-    line-height: 1.75;
-    margin-bottom: 1.4rem;
-  }
-
-  .tagline strong { color: var(--text); font-weight: 500; }
-
-  .pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-bottom: 1.4rem;
-  }
-
-  .pill {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    border: 0.5px solid var(--border-2);
-    color: var(--text-2);
-    background: var(--bg-secondary);
-  }
-
-  .pill.g {
-    background: var(--green);
-    border-color: var(--green-dark);
-    color: #ffffff;
-    font-weight: 500;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .pill.g { color: #ffffff; }
-  }
-
-  .hero-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .hero-link {
-    font-size: 13px;
-    color: var(--text-2);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color .15s;
-  }
-
-  .hero-link:hover { color: var(--green); }
-  .hero-link i { font-size: 15px; }
-
-  /* ── STATS ── */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .stat {
-    padding: 1.25rem 1.5rem;
-    border-right: 0.5px solid var(--border);
-  }
-
-  .stat:last-child { border-right: none; }
-
-  .stat-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 28px;
-    color: var(--green);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: var(--text-3);
-    line-height: 1.4;
-  }
-
-  @media (max-width: 600px) {
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    .stat:nth-child(2) { border-right: none; }
-    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 0.5px solid var(--border); }
-  }
-
-  /* ── TABS ── */
-  .tabs-wrap {
+  /* ─────────── NAV ─────────── */
+  .nav {
     position: sticky;
     top: 0;
-    z-index: 10;
-    background: var(--bg);
-    border-bottom: 0.5px solid var(--border);
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--rule);
   }
-
-  .tabs {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .tabs::-webkit-scrollbar { display: none; }
-
-  .tab-btn {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    border: none;
-    border-bottom: 2px solid transparent;
-    background: none;
-    color: var(--text-3);
-    white-space: nowrap;
-    transition: color .15s, border-color .15s;
-  }
-
-  .tab-btn:hover { color: var(--text-2); }
-  .tab-btn.on { border-bottom-color: var(--green); color: var(--green); }
-
-  /* ── PANELS ── */
-  .panel { display: none; }
-  .panel.on { display: block; }
-
-  .panel-inner {
-    padding: 2.5rem 0;
-  }
-
-  /* ── SECTION HEADER ── */
-  .sec-hd {
+  .nav-in {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 52px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 1.25rem;
+    gap: 26px;
   }
-
-  .sec-lbl {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--text-3);
-    white-space: nowrap;
-  }
-
-  .sec-line {
-    flex: 1;
-    height: 0.5px;
-    background: var(--border);
-  }
-
-  .sec-link {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--green-dark);
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    white-space: nowrap;
-  }
-
-  .sec-link:hover { color: var(--green); }
-
-  /* ── INSIGHT BOX ── */
-  .ibox {
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    padding: 1rem 1.25rem;
-    margin-bottom: 2rem;
-    border-left: 2px solid var(--green);
-  }
-
-  .ibox-lbl {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: .14em;
-    color: var(--green-dark);
-    margin-bottom: .35rem;
-  }
-
-  .ibox-txt {
-    font-size: 13px;
-    color: var(--text-2);
-    line-height: 1.7;
-  }
-
-  .ibox-txt strong { color: var(--text); font-weight: 500; }
-
-  /* ── BUILD CARDS ── */
-  .build-section { margin-bottom: 2.5rem; }
-
-  .builds-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-  }
-
-  .bcard {
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.1rem;
-    background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-    transition: border-color .2s, transform .2s;
-  }
-
-  .bcard:hover {
-    border-color: var(--green-border);
-    transform: translateY(-1px);
-  }
-
-  .bcard-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: .5rem;
-  }
-
-  .bicon {
-    width: 34px;
-    height: 34px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-
-  .bicon.lv { background: #EEF0FE; color: #534AB7; }
-  .bicon.vc { background: var(--bg-secondary); color: var(--text-2); }
-  .bicon.gh { background: var(--bg-secondary); color: var(--text-2); }
-
-  .btool-badge {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    padding: 2px 7px;
-    border-radius: 10px;
-    border: 0.5px solid var(--border);
-    color: var(--text-3);
-  }
-
-  .bname {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--text);
-  }
-
-  .bcat {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    color: var(--text-3);
-    text-transform: uppercase;
-    letter-spacing: .07em;
-  }
-
-  .bdesc {
-    font-size: 12px;
-    color: var(--text-2);
-    line-height: 1.6;
-    flex: 1;
-  }
-
-  .blink {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--green-dark);
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    margin-top: auto;
-    transition: color .15s;
-  }
-
-  .blink:hover { color: var(--green); }
-
-  /* ── ARTICLE CARDS ── */
-  .articles { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-
-  .acard {
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    background: var(--bg);
-    cursor: pointer;
-    transition: border-color .2s;
-  }
-
-  .acard:hover { border-color: var(--green-border); }
-  .acard.on { border-color: var(--green); }
-
-  .acard-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 4px;
-  }
-
-  .anum {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--text-3);
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-
-  .atitle {
+  .nav-me {
     font-family: 'DM Serif Display', serif;
     font-size: 17px;
-    line-height: 1.2;
-    color: var(--text);
-    flex: 1;
+    letter-spacing: -.01em;
+    margin-right: auto;
   }
-
-  .adate {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--text-3);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .asub {
-    font-size: 12px;
-    color: var(--green-dark);
-    font-style: italic;
-    margin-bottom: 0;
-    padding-left: 1.5rem;
-  }
-
-  .abody {
-    display: none;
-    margin-top: .85rem;
-    padding-top: .85rem;
-    border-top: 0.5px solid var(--border);
-  }
-
-  .acard.on .abody { display: block; }
-
-  .atags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: .75rem;
-  }
-
-  .atag {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: var(--bg-secondary);
-    border: 0.5px solid var(--border);
-    color: var(--text-3);
-  }
-
-  .adesc {
-    font-size: 13px;
-    color: var(--text-2);
-    line-height: 1.7;
-    margin-bottom: .85rem;
-  }
-
-  .apq {
-    border-left: 2px solid var(--green);
-    padding: .5rem .9rem;
-    font-family: 'DM Serif Display', serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.55;
-    margin-bottom: .75rem;
-  }
-
-  .alink {
+  .nav a {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
-    color: var(--green-dark);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .nav a:hover { color: var(--green); }
+  .nav a.out { color: var(--green); }
+  @media (max-width: 620px) {
+    .nav-me { display: none; }
+    .nav-in { gap: 18px; justify-content: space-between; overflow-x: auto; scrollbar-width: none; }
+    .nav-in::-webkit-scrollbar { display: none; }
+  }
+
+  /* ─────────── SECTIONS ─────────── */
+  section { padding: 72px 0; border-top: 1px solid var(--rule); scroll-margin-top: 52px; }
+  section:first-of-type { border-top: none; }
+
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .kicker a { color: var(--green); border-bottom: 1px solid transparent; }
+  .kicker a:hover { border-bottom-color: var(--green); }
+  .kicker .sp { margin-left: auto; }
+
+  /* ─────────── HERO ─────────── */
+  .hero { padding: 88px 0 64px; }
+
+  .hero-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 34px;
+  }
+
+  .portrait {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 32%;
+    flex-shrink: 0;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    filter: saturate(.92);
+  }
+  /* graceful fallback until portrait.jpg is added */
+  .portrait-fallback {
+    width: 96px; height: 96px; border-radius: 50%;
+    flex-shrink: 0;
+    display: none;
+    align-items: center; justify-content: center;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--green);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 7vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -.015em;
+    margin-bottom: 10px;
+  }
+  h1 em { font-style: italic; color: var(--green); }
+
+  .role {
+    font-size: 16px;
+    color: var(--text-2);
+    line-height: 1.5;
+  }
+
+  .lede {
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 30px;
+    max-width: 34ch;
+  }
+  .lede strong { font-weight: 500; }
+  .lede em {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    color: var(--green);
+  }
+  @media (min-width: 620px) { .lede { max-width: 46ch; } }
+
+  .now {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-2);
+    max-width: 52ch;
+    margin-bottom: 26px;
+    padding-left: 15px;
+    border-left: 2px solid var(--rule);
+  }
+  .now-l {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 2px;
+  }
+
+  .status {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    transition: color .15s;
-  }
-
-  .alink:hover { color: var(--green); }
-
-  /* ── BOOK BOX ── */
-  .bookbox {
-    border: 0.5px solid var(--green-border);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    background: var(--green-light);
-    margin-bottom: 2rem;
-  }
-
-  .bookbox-lbl {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: .14em;
-    color: var(--green-darker);
-    margin-bottom: .4rem;
-  }
-
-  .bookbox-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    color: var(--green-darker);
-    margin-bottom: .4rem;
-  }
-
-  .bookbox-title em { font-style: italic; }
-
-  .bookbox-desc {
-    font-size: 13px;
-    color: var(--green-dark);
-    line-height: 1.65;
-  }
-
-  /* ── CAREER CARDS ── */
-  .exp-cards { display: flex; flex-direction: column; gap: .85rem; }
-
-  .ecard {
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    background: var(--bg);
-    cursor: pointer;
-    transition: border-color .2s;
-  }
-
-  .ecard:hover { border-color: var(--green-border); }
-  .ecard.on { border-color: var(--green); }
-
-  .ecard-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: .75rem;
-    margin-bottom: 3px;
-  }
-
-  .ecompany { font-size: 15px; font-weight: 500; color: var(--text); }
-
-  .ecompany span {
-    font-size: 11px;
-    color: var(--text-3);
-    font-weight: 400;
-  }
-
-  .eperiod {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--text-3);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .erole {
-    font-size: 12px;
-    color: var(--green-dark);
-    margin-bottom: .5rem;
-  }
-
-  .ebody {
-    display: none;
-    font-size: 13px;
+    gap: 9px;
+    font-size: 14px;
     color: var(--text-2);
-    line-height: 1.7;
+    background: var(--bg-2);
+    border-radius: 999px;
+    padding: 7px 16px 7px 13px;
+    margin-bottom: 30px;
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green-bright);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--green-bright) 22%, transparent);
   }
 
-  .ecard.on .ebody { display: block; }
-
-  .badges {
+  .contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: .75rem;
-  }
-
-  .badge {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: var(--green-light);
-    color: var(--green-darker);
-    border: 0.5px solid var(--green-mid);
-  }
-
-  /* ── SKILLS ── */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-    gap: 10px;
-    margin-bottom: 2rem;
-  }
-
-  .sg {
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    padding: .9rem;
-  }
-
-  .sg-title {
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--text-2);
-    margin-bottom: .6rem;
-  }
-
-  .stags { display: flex; flex-wrap: wrap; gap: 4px; }
-
-  .stag {
-    font-size: 11px;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: var(--bg);
-    border: 0.5px solid var(--border);
-    color: var(--text);
-  }
-
-  /* ── EDU ── */
-  .edu-row {
-    display: flex;
-    gap: .9rem;
-    align-items: flex-start;
-    padding: .75rem 0;
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .edu-row:last-child { border-bottom: none; padding-bottom: 0; }
-
-  .edu-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    margin-top: 6px;
-    flex-shrink: 0;
-  }
-
-  .edu-inst { font-size: 14px; font-weight: 500; }
-
-  .edu-deg {
-    font-size: 12px;
-    color: var(--text-2);
-    margin-top: 2px;
-  }
-
-  .edu-yr {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--text-3);
-    margin-left: auto;
-    white-space: nowrap;
-  }
-
-  /* ── CTA / FOOTER ── */
-  .cta {
-    border-top: 0.5px solid var(--border);
-    padding: 1.75rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .cta-txt {
+    gap: 6px 22px;
     font-size: 14px;
     color: var(--text-2);
   }
+  .contact a {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: color .15s, border-color .15s;
+  }
+  .contact a:hover { color: var(--green); border-bottom-color: var(--green); }
 
-  .cta-txt strong { color: var(--text); font-weight: 500; }
+  /* ─────────── PROOF ─────────── */
+  .proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 34px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .proof-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--green);
+    margin-bottom: 7px;
+  }
+  .proof-l { font-size: 14px; color: var(--text-2); line-height: 1.45; }
+  .proof-l b {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--text-3);
+    margin-bottom: 3px;
+  }
+  @media (max-width: 560px) {
+    .proof { grid-template-columns: 1fr; gap: 22px; }
+  }
 
-  .cta-btn {
-    display: inline-flex;
+  /* ─────────── WORK ─────────── */
+  .job { padding: 26px 0; border-bottom: 1px solid var(--rule); }
+  .job:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 3px;
+  }
+  .job-co {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  .job-when {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-3);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .job-role { font-size: 14px; color: var(--green); margin-bottom: 10px; }
+  .job-desc { font-size: 15.5px; color: var(--text-2); line-height: 1.62; }
+  .job-desc b { color: var(--text); font-weight: 500; }
+
+  @media (max-width: 560px) {
+    .job-top { flex-direction: column; gap: 2px; }
+  }
+
+  /* ─────────── WRITING ─────────── */
+  .gita {
+    border-left: 2px solid var(--green);
+    padding: 2px 0 2px 18px;
+    margin-bottom: 36px;
+  }
+  .gita-t {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    margin-bottom: 3px;
+  }
+  .gita-t em { font-style: italic; color: var(--green); }
+  .gita-d { font-size: 15px; color: var(--text-2); }
+
+  .essay {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    transition: padding-left .22s ease;
+  }
+  .essay:hover { padding-left: 6px; }
+  .essay:hover .essay-t { color: var(--green); }
+  .essay:hover .essay-img { transform: scale(1.04); }
+
+  .essay-img {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    object-fit: cover;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    transition: transform .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .essay-body { flex: 1; min-width: 0; }
+
+  .essay-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 18px;
+  }
+  @media (max-width: 560px) {
+    .essay-img { width: 60px; height: 60px; }
+    .essay { gap: 14px; }
+  }
+  .essay-t {
+    font-family: 'DM Serif Display', serif;
+    font-size: 21px;
+    line-height: 1.28;
+    transition: color .15s;
+  }
+  .essay-d {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-3);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .essay-s {
+    font-size: 15px;
+    color: var(--text-2);
+    margin-top: 4px;
+    max-width: 56ch;
+  }
+  @media (max-width: 560px) {
+    .essay-top { flex-direction: column-reverse; align-items: flex-start; gap: 3px; }
+  }
+
+  .more {
+    display: inline-block;
+    margin-top: 26px;
+    font-size: 15px;
+    color: var(--green);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+  }
+  .more:hover { border-bottom-color: var(--green); }
+
+  /* ─────────── BUILD ─────────── */
+  .builds { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  @media (max-width: 620px) { .builds { grid-template-columns: 1fr; } }
+
+  .build {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .build:hover .build-n { color: var(--green); }
+  .build-n { font-size: 15.5px; font-weight: 400; transition: color .15s; }
+  .build-d { font-size: 13.5px; color: var(--text-3); margin-top: 1px; }
+
+  /* the one someone else validated */
+  .build.feat { grid-column: 1 / -1; }
+  .build.feat .build-n { font-size: 17px; }
+  .build.feat .build-d { color: var(--text-2); }
+  .tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid color-mix(in srgb, var(--green) 35%, transparent);
+    border-radius: 999px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: 2px;
+  }
+
+  .build-note {
+    grid-column: 1 / -1;
+    font-size: 15px;
+    color: var(--text-2);
+    margin-bottom: 22px;
+    max-width: 60ch;
+  }
+  .build-note b { color: var(--text); font-weight: 500; }
+
+  /* ─────────── COACHING ─────────── */
+  .coach-lede {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-2);
+    max-width: 60ch;
+    margin-bottom: 30px;
+  }
+  .coach-lede b { color: var(--text); font-weight: 500; }
+
+  .talk {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    font-family: 'Outfit', sans-serif;
+    gap: 18px;
+    padding: 14px;
+    margin-left: -14px;
+    border-radius: 10px;
+    transition: background .18s;
+  }
+  .talk:hover { background: var(--bg-2); }
+  .talk:hover .talk-t { color: var(--green); }
+  .talk:hover .play { transform: scale(1.08); }
+
+  .talk-thumb {
+    position: relative;
+    width: 140px;
+    height: 79px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--bg-2);
+  }
+  .talk-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.62);
+    transition: transform .2s cubic-bezier(.2,.7,.3,1);
+  }
+  .play::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent #fff;
+    transform: translateX(1.5px);
+  }
+
+  .talk-t {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 3px;
+    transition: color .15s;
+  }
+  .talk-m {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .06em;
+    color: var(--text-3);
+  }
+  @media (max-width: 480px) {
+    .talk-thumb { width: 104px; height: 59px; }
+    .talk-t { font-size: 15px; }
+  }
+
+  /* ─────────── ELSEWHERE (low priority by design) ─────────── */
+  .quiet { padding: 56px 0; }
+  .el-note {
+    font-size: 15px;
+    color: var(--text-3);
+    margin-bottom: 20px;
+  }
+  .els { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  @media (max-width: 620px) { .els { grid-template-columns: 1fr; } }
+
+  .el {
+    display: block;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .el:hover .el-n { color: var(--green); }
+  .el-n {
+    display: block;
+    font-size: 14.5px;
+    color: var(--text-2);
+    transition: color .15s;
+  }
+  .el-d {
+    display: block;
     font-size: 13px;
-    font-weight: 500;
-    padding: 9px 18px;
-    border-radius: var(--radius-sm);
-    background: var(--green);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background .15s;
+    color: var(--text-3);
+    line-height: 1.45;
   }
 
-  .cta-btn:hover { background: var(--green-dark); }
-
-  /* ── MISC ── */
-  .divider { margin-bottom: 2.5rem; }
-
-  @media (max-width: 580px) {
-    .hero { padding: 2.5rem 0 2rem; }
-    .panel-inner { padding: 2rem 0; }
-    .builds-grid { grid-template-columns: 1fr 1fr; }
-    .cta { flex-direction: column; align-items: flex-start; }
-    .acard-top { flex-wrap: wrap; }
+  /* ─────────── CTA ─────────── */
+  .cta { padding: 72px 0 88px; text-align: center; }
+  .cta-h {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4.5vw, 34px);
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
-
-  @media (max-width: 400px) {
-    .builds-grid { grid-template-columns: 1fr; }
+  .cta-h em { font-style: italic; color: var(--green); }
+  .cta-p { font-size: 15.5px; color: var(--text-2); margin-bottom: 4px; }
+  .cta-p2 {
+    font-size: 14.5px;
+    color: var(--text-3);
+    margin: 0 auto 26px;
+    max-width: 44ch;
+    line-height: 1.55;
   }
-
-  /* Page load fade */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .btn {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 30px;
+    border-radius: 999px;
+    background: var(--text);
+    color: var(--bg);
+    transition: transform .15s, opacity .15s;
   }
+  .btn:hover { transform: translateY(-1px); opacity: .88; }
 
-  .hero, .stats { animation: fadeUp .45s ease both; }
-  .tabs-wrap { animation: fadeUp .45s .05s ease both; }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 26px 0 44px;
+    font-size: 13px;
+    color: var(--text-3);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer a:hover { color: var(--green); }
+
+  /* ─────────── LOAD ─────────── */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .hero-head, .lede, .now, .status, .contact, .proof { animation: rise .6s cubic-bezier(.2,.7,.3,1) both; }
+  .lede    { animation-delay: .06s; }
+  .now     { animation-delay: .12s; }
+  .status  { animation-delay: .17s; }
+  .contact { animation-delay: .21s; }
+  .proof   { animation-delay: .26s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <p class="eyebrow">Product Executive · AI Platforms · Builder · Writer · Hyderabad · I-140 Approved · Cap-Exempt · Open to US Remote</p>
-    <h1 class="hero-name">Srinivas <em>Mullapudi</em></h1>
-    <p class="tagline">
-      20+ years leading AI-native platforms and enterprise data systems at scale.
-      <strong>I don't just spec AI — I ship it, write about it, and think harder about it than most people in the room.</strong>
-      Currently Director PM at Highspot, owning 25% of ARR.
-    </p>
-    <div class="pills">
-      <span class="pill g">RAG Orchestration</span>
-      <span class="pill g">Agentic AI</span>
-      <span class="pill g">Hands-on Builder</span>
-      <span class="pill g">AI PM Gita Author</span>
-      <span class="pill">0→1 Products</span>
-      <span class="pill">India Hub Builder</span>
-      <span class="pill">Enterprise SaaS</span>
-      <span class="pill">ISB MBA</span>
-    </div>
-    <div class="hero-links">
-      <a class="hero-link" href="mailto:thisissubbu@gmail.com"><i class="ti ti-mail"></i> thisissubbu@gmail.com</a>
-      <span class="hero-link"><i class="ti ti-phone"></i> +91-8374446622</span>
-      <a class="hero-link" href="https://github.com/idlebrain2000" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> idlebrain2000</a>
-      <a class="hero-link" href="https://vasumullapudi.substack.com" target="_blank" rel="noopener"><i class="ti ti-pencil"></i> Ground Truth</a>
-      <a class="hero-link" href="https://vasumullapudi.medium.com" target="_blank" rel="noopener"><i class="ti ti-brand-medium"></i> Medium</a>
-      <a class="hero-link" href="https://www.amazon.in/Hanuman-little-Girl-Diwali-Adventure/dp/B0BGZQHKP1" target="_blank" rel="noopener"><i class="ti ti-book-2"></i> Hanuman & The Little Girl</a>
-    </div>
-  </section>
-
-  <!-- ── STATS ── -->
-  <div class="stats">
-    <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years shipping product</div></div>
-    <div class="stat"><div class="stat-num">30%</div><div class="stat-label">ARR uplift via AI · Highspot</div></div>
-    <div class="stat"><div class="stat-num" style="font-size:15px;line-height:1.3;">Hands-on builder</div><div class="stat-label">Active across Lovable, Vercel & GitHub — dabbles in app building to stay sharp</div></div>
-    <div class="stat"><div class="stat-num" style="font-size:15px;line-height:1.3;">Active writer</div><div class="stat-label">Deep-researched tech writing on AI, product, and what actually ships</div></div>
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-me">Srinivas Mullapudi</span>
+    <a href="#work">Work</a>
+    <a href="#write">Writing</a>
+    <a href="#build">Build</a>
+    <a href="#coaching">Coaching</a>
+    <a class="out" href="#contact">Contact</a>
   </div>
+</nav>
 
-  <!-- ── TABS ── -->
-  <div class="tabs-wrap">
-    <div class="container">
-      <div class="tabs" role="tablist">
-        <button class="tab-btn on" role="tab" onclick="showTab('build', this)">Build</button>
-        <button class="tab-btn" role="tab" onclick="showTab('write', this)">Write</button>
-        <button class="tab-btn" role="tab" onclick="showTab('accomplished', this)">Accomplishments</button>
-        <button class="tab-btn" role="tab" onclick="showTab('skills', this)">Skills & Education</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══ BUILD ══ -->
-  <div id="build" class="panel on" role="tabpanel">
-    <div class="panel-inner">
-
-      <div class="ibox">
-        <div class="ibox-lbl">Why this section exists</div>
-        <div class="ibox-txt">I build with the same AI tools my teams use — Lovable, Vercel, GitHub. <strong>A PM who can't prototype can't meaningfully push back on engineering estimates, de-risk an agent architecture, or tell the difference between a demo and a product.</strong> These aren't side projects. They're how I stay ahead of every team I lead.</div>
-      </div>
-
-      <div class="build-section">
-        <div class="sec-hd">
-          <span class="sec-lbl">Lovable · AI-generated apps</span>
-          <div class="sec-line"></div>
-          <span class="sec-lbl">live</span>
-        </div>
-        <div class="builds-grid">
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon lv"><i class="ti ti-microphone"></i></div><span class="btool-badge">Lovable</span></div>
-            <div class="bname">Aria — Voice Concierge</div>
-            <div class="bcat">PropTech · AI Voice Agent</div>
-            <div class="bdesc">AI voice agent qualifying premium real estate leads through natural phone conversations. NRI luxury segment.</div>
-            <a class="blink" href="https://aria-wise-advisor.lovable.app/" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> aria-wise-advisor.lovable.app</a>
-          </div>
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon lv"><i class="ti ti-home-2"></i></div><span class="btool-badge">Lovable</span></div>
-            <div class="bname">LuxeHome — Real Estate Discovery</div>
-            <div class="bcat">PropTech · NRI · AI Concierge</div>
-            <div class="bdesc">Immersive video tour platform with AI concierge for NRI buyers seeking premium Indian real estate.</div>
-            <a class="blink" href="https://dream-vid-home.lovable.app/" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> dream-vid-home.lovable.app</a>
-          </div>
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon lv"><i class="ti ti-salad"></i></div><span class="btool-badge">Lovable</span></div>
-            <div class="bname">SugaPal — Meal Mentor</div>
-            <div class="bcat">HealthTech · AI Nutrition</div>
-            <div class="bdesc">Personalised AI meal planning and dietary guidance focused on blood sugar management.</div>
-            <a class="blink" href="https://sugapal-meal-mentor.lovable.app" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> sugapal-meal-mentor.lovable.app</a>
-          </div>
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon lv"><i class="ti ti-brain"></i></div><span class="btool-badge">Lovable</span></div>
-            <div class="bname">Emotion Insights</div>
-            <div class="bcat">MentalTech · AI Self-awareness</div>
-            <div class="bdesc">AI-powered emotional pattern analysis and self-awareness insights tracked over time.</div>
-            <a class="blink" href="https://emotion-insights-unveiled.lovable.app" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> emotion-insights-unveiled.lovable.app</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="build-section">
-        <div class="sec-hd">
-          <span class="sec-lbl">Vercel · hand-coded & deployed</span>
-          <div class="sec-line"></div>
-        </div>
-        <div class="builds-grid">
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon vc"><i class="ti ti-triangle"></i></div><span class="btool-badge">Vercel · HTML</span></div>
-            <div class="bname">Sway AI Labs</div>
-            <div class="bcat">Startup Prototype · AI Demand Engine</div>
-            <div class="bdesc">5-agent AI pipeline delivering qualified buyers to WhatsApp for Indian SMEs. Hand-written, trilingual: English, Hindi, Telugu.</div>
-            <a class="blink" href="https://sway-site-blond.vercel.app" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> sway-site-blond.vercel.app</a>
-          </div>
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon vc"><i class="ti ti-book-2"></i></div><span class="btool-badge">Published · Amazon</span></div>
-            <div class="bname">Hanuman & The Little Girl</div>
-            <div class="bcat">EdTech · Publishing · Children's Book</div>
-            <div class="bdesc">Children's storybook celebrating Indian culture and Diwali traditions. Original authored content, from idea to published book.</div>
-            <a class="blink" href="https://www.amazon.in/Hanuman-little-Girl-Diwali-Adventure/dp/B0BGZQHKP1" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> amazon.in</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="build-section">
-        <div class="sec-hd">
-          <span class="sec-lbl">GitHub · source & experiments</span>
-          <div class="sec-line"></div>
-          <a class="sec-link" href="https://github.com/idlebrain2000" target="_blank" rel="noopener">idlebrain2000 <i class="ti ti-external-link"></i></a>
-        </div>
-        <div class="builds-grid">
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon gh"><i class="ti ti-brand-github"></i></div><span class="btool-badge">GitHub · HTML</span></div>
-            <div class="bname">sway-site</div>
-            <div class="bcat">Source · Vercel Deployed</div>
-            <div class="bdesc">Hand-written source for Sway AI Labs. Shows ability to write and ship without scaffolding or boilerplate.</div>
-            <a class="blink" href="https://github.com/idlebrain2000/sway-site" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> github.com/idlebrain2000/sway-site</a>
-          </div>
-          <div class="bcard">
-            <div class="bcard-top"><div class="bicon gh"><i class="ti ti-flask"></i></div><span class="btool-badge">GitHub · Active</span></div>
-            <div class="bname">workshop</div>
-            <div class="bcat">Experiments · Prototypes</div>
-            <div class="bdesc">Public scratchpad — ideas stress-tested before they ship anywhere. Where art of the possible gets explored.</div>
-            <a class="blink" href="https://github.com/idlebrain2000/workshop" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> github.com/idlebrain2000/workshop</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══ WRITE ══ -->
-  <div id="write" class="panel" role="tabpanel">
-    <div class="panel-inner">
-
-      <div class="bookbox">
-        <div class="bookbox-lbl">Work in progress · Book</div>
-        <div class="bookbox-title">The <em>AI PM Gita</em></div>
-        <div class="bookbox-desc">18 parvas. 18 lessons in AI product management — drawn from the Mahabharata and tested against real system failures, enterprise deployments, and the craft of building AI that actually ships. The articles below are excerpted chapters.</div>
-      </div>
-
-      <div class="sec-hd">
-        <span class="sec-lbl">Ground Truth · Substack</span>
-        <div class="sec-line"></div>
-        <a class="sec-link" href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">Subscribe <i class="ti ti-external-link"></i></a>
-      </div>
-
-      <div class="ibox" style="margin-bottom:1.5rem;">
-        <div class="ibox-lbl">The thread connecting all four</div>
-        <div class="ibox-txt"><strong>What does AI actually do — to products, teams, markets, decisions?</strong> Not what the pitch deck says. What actually happens when probabilistic systems meet real budgets, real users, and real production environments.</div>
-      </div>
-
-      <div class="articles">
-
-        <div class="acard on" onclick="toggleArticle(this)">
-          <div class="acard-top">
-            <span class="anum">01</span>
-            <div class="atitle" style="flex:1;">Schrödinger's AI Agent</div>
-            <span class="adate">Jun 10, 2026</span>
-          </div>
-          <div class="asub">Simultaneously in production and not, until the CFO opens the invoice</div>
-          <div class="abody">
-            <div class="atags"><span class="atag">Enterprise AI</span><span class="atag">Agentic Systems</span><span class="atag">ROI</span><span class="atag">Failure Modes</span></div>
-            <div class="adesc">88% of enterprise AI agents never reach production. Five failure autopsies: orphaned data pipelines, compliance ambushes, the edge case that walked in on a Tuesday, token bills that shock CFOs, and the accountability void nobody budgeted for. Uber burned its entire annual AI budget in 4 months. Microsoft revoked developer licenses. One company ran a $500M Claude bill. An entire VC-funded category now exists just to solve failure mode #5.</div>
-            <div class="apq">"We are living through the most overfunded, overhyped, and underdelivered moment in enterprise software history. Every boardroom has a pilot. Almost nobody has a production system."</div>
-            <a class="alink" href="https://vasumullapudi.substack.com/p/schrodingers-ai-agent-simultaneously" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> Read on Substack</a>
-          </div>
-        </div>
-
-        <div class="acard" onclick="toggleArticle(this)">
-          <div class="acard-top">
-            <span class="anum">02</span>
-            <div class="atitle" style="flex:1;">You didn't build a product. You built a trap.</div>
-            <span class="adate">Jun 11, 2026</span>
-          </div>
-          <div class="asub">What the Mahabharata knew about AI failure that your PRD doesn't</div>
-          <div class="abody">
-            <div class="atags"><span class="atag">AI Product Design</span><span class="atag">Trust</span><span class="atag">Failure Modes</span><span class="atag">AI PM Gita</span></div>
-            <div class="adesc">The Chakravyuha — the inescapable battle formation from the Mahabharata — as a frame for why most AI features are traps: brilliantly designed for entry, no exit built in. Introduces the Three Rings framework (Signal, Threshold, Exit) and a forensic breakdown of AI sycophancy — the most dangerous failure mode nobody reports because it looks like success.</div>
-            <div class="apq">"The model learned to please, not to help. Nobody files a bug report that says 'the AI was too agreeable.' That is what makes sycophancy the most dangerous failure of all."</div>
-            <a class="alink" href="https://vasumullapudi.substack.com/p/you-didnt-build-a-product-you-built" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> Read on Substack</a>
-          </div>
-        </div>
-
-        <div class="acard" onclick="toggleArticle(this)">
-          <div class="acard-top">
-            <span class="anum">03</span>
-            <div class="atitle" style="flex:1;">Shift Right</div>
-            <span class="adate">Jun 20, 2026</span>
-          </div>
-          <div class="asub">AI is doing to PM what DevOps did to testing — except the direction is opposite</div>
-          <div class="abody">
-            <div class="atags"><span class="atag">Product Management</span><span class="atag">AI & PM Role</span><span class="atag">Strategy</span><span class="atag">Customer Understanding</span></div>
-            <div class="adesc">4 founders at Cursor beat Microsoft's 26M-user GitHub Copilot without better technology — they out-understood the developer. When building collapses to near-zero cost, the constraint shifts entirely to customer understanding. Maps how discovery, strategy, roadmaps, metrics, and GTM all need to shift right — toward the customer, continuously, not quarterly.</div>
-            <div class="apq">"When anyone can copy your features in a week, a feature advantage lasts a week. A human insight — genuinely held, operationalized across the product — lasts years."</div>
-            <a class="alink" href="https://vasumullapudi.substack.com/p/shift-right" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> Read on Substack</a>
-          </div>
-        </div>
-
-        <div class="acard" onclick="toggleArticle(this)">
-          <div class="acard-top">
-            <span class="anum">04</span>
-            <div class="atitle" style="flex:1;">The $900M Gambit</div>
-            <span class="adate">Jun 22, 2026</span>
-          </div>
-          <div class="asub">A tale of $900M, three billion users, and a man who only ever let 1% in</div>
-          <div class="abody">
-            <div class="atags"><span class="atag">India Tech</span><span class="atag">Meta · CRED</span><span class="atag">Fintech</span><span class="atag">Follow the Money</span></div>
-            <div class="adesc">Six dots connecting Meta's $900M CRED investment and Kunal Shah's appointment to lead WhatsApp globally. The central contradiction: the man who built his empire by excluding 99% of India (CIBIL 750+ gate) now has to serve three billion. The data wall, the Jio precedent, the LeCun departure as a cautionary parallel.</div>
-            <div class="apq">"Robin has the batarang. Batman can't open it."</div>
-            <a class="alink" href="https://vasumullapudi.substack.com/p/the-900m-gambit" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> Read on Substack</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="sec-hd" style="margin-top:2rem;">
-        <span class="sec-lbl">Other writing</span>
-        <div class="sec-line"></div>
-      </div>
-      <div class="builds-grid">
-        <div class="bcard">
-          <div class="bcard-top"><div class="bicon vc"><i class="ti ti-brand-medium"></i></div><span class="btool-badge">Medium</span></div>
-          <div class="bname">Earlier essays</div>
-          <div class="bcat">2021 · Product · Leadership</div>
-          <div class="bdesc">Earlier long-form writing on product thinking and leadership. The roots of the Ground Truth voice.</div>
-          <a class="blink" href="https://vasumullapudi.medium.com" target="_blank" rel="noopener"><i class="ti ti-external-link"></i> vasumullapudi.medium.com</a>
-        </div>
-        <div class="bcard">
-          <div class="bcard-top"><div class="bicon lv"><i class="ti ti-feather"></i></div><span class="btool-badge">Print & Digital</span></div>
-          <div class="bname">Fiction & poetry</div>
-          <div class="bcat">Published · Original</div>
-          <div class="bdesc">Original short stories and poems in digital and print. Writing as a practice that sharpens every other kind of thinking.</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══ ACCOMPLISHED ══ -->
-  <div id="accomplished" class="panel" role="tabpanel">
-    <div class="panel-inner">
-
-      <div class="ibox">
-        <div class="ibox-lbl">The pattern</div>
-        <div class="ibox-txt">Every role follows the same arc: <strong>inherit complexity, impose order, ship AI, measure outcomes.</strong> Not a PM who manages features — a PM who owns ARR, builds orgs from zero, and leaves systems behind that run without them.</div>
-      </div>
-
-      <div class="sec-hd">
-        <span class="sec-lbl">Career</span>
-        <div class="sec-line"></div>
-        <span class="sec-lbl">click to expand</span>
-      </div>
-
-      <div class="exp-cards">
-
-        <div class="ecard on" onclick="toggleExp(this)">
-          <div class="ecard-top">
-            <div>
-              <div class="ecompany">Highspot <span>— $3.5B · Revenue Enablement SaaS</span></div>
-              <div class="erole">Director PM · Analytics, Data Platform & AI · 25% of ARR</div>
-            </div>
-            <div class="eperiod">Mar 2024 – Present</div>
-          </div>
-          <div class="ebody">
-            Architected Nexus™ GTM Agent and Deal Agent on RAG orchestration, vector data pipelines, and real-time content ingestion. Built the India Product & Engineering hub from zero — 80+ engineers and PMs. Cut AI and permission latency 10x, directly driving end-user adoption. Launched a standardised tools catalog decoupling AI from the data layer, compressing agent time-to-market from months to days. Delivered 30% ARR uplift through AI capabilities launched.
-            <div class="badges">
-              <span class="badge">30% ARR uplift</span>
-              <span class="badge">10x latency cut</span>
-              <span class="badge">25% faster agent ramp</span>
-              <span class="badge">80-person India hub · zero to one</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ecard" onclick="toggleExp(this)">
-          <div class="ecard-top">
-            <div>
-              <div class="ecompany">Innovapptive <span>— Connected Industrial Worker · Fortune 500</span></div>
-              <div class="erole">VP Product · BU Head · 120+ person org</div>
-            </div>
-            <div class="eperiod">Dec 2022 – Feb 2024</div>
-          </div>
-          <div class="ebody">
-            Led product vision and execution for a 120+ person cross-functional org. Built two zero-to-one cloud-native SaaS platforms as foundational services. Onboarded 10+ Fortune 500 customers and doubled cARR in 12 months. Architected a Computer Vision inference platform with edge-to-cloud data sync achieving sub-3-second hazard detection for frontline workers.
-            <div class="badges">
-              <span class="badge">2x cARR in 12 months</span>
-              <span class="badge">10+ Fortune 500 onboarded</span>
-              <span class="badge">&lt;3s CV hazard detection</span>
-              <span class="badge">45% faster implementation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ecard" onclick="toggleExp(this)">
-          <div class="ecard-top">
-            <div>
-              <div class="ecompany">e2open <span>— Enterprise Supply Chain SaaS</span></div>
-              <div class="erole">Director PM · Supply Chain Planning Suite · 15%+ of ARR</div>
-            </div>
-            <div class="eperiod">Apr 2016 – Nov 2022</div>
-          </div>
-          <div class="ebody">
-            Product lead for the Planning Suite contributing 15%+ of subscription revenue — demand forecasting and promotions planning for global enterprises. Integrated Channel Data Management with Planning, creating a unified operational view: 15% cross-sell growth and 10% better forecast accuracy.
-            <div class="badges">
-              <span class="badge">15%+ of subscription ARR</span>
-              <span class="badge">15% cross-sell growth</span>
-              <span class="badge">10% forecast accuracy gain</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ecard" onclick="toggleExp(this)">
-          <div class="ecard-top">
-            <div>
-              <div class="ecompany">Earlier US roles</div>
-              <div class="erole">Platinum DB Consulting · Global Information Systems · Tech Mahindra</div>
-            </div>
-            <div class="eperiod">2004 – 2015</div>
-          </div>
-          <div class="ebody">
-            Program Manager at Platinum DB Consulting (USA) — 7 years of enterprise delivery across US clients. Programmer Analyst at Global Information Systems (USA). Software Engineer at Tech Mahindra. The engineering foundation that still informs how I build and evaluate systems today.
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ══ SKILLS ══ -->
-  <div id="skills" class="panel" role="tabpanel">
-    <div class="panel-inner">
-
-      <div class="sec-hd"><span class="sec-lbl">Expertise</span><div class="sec-line"></div></div>
-      <div class="skills-grid">
-        <div class="sg"><div class="sg-title">AI / Data</div><div class="stags"><span class="stag">RAG systems</span><span class="stag">Agentic workflows</span><span class="stag">Vector pipelines</span><span class="stag">LLM orchestration</span><span class="stag">Knowledge graphs</span></div></div>
-        <div class="sg"><div class="sg-title">Platform</div><div class="stags"><span class="stag">Connector ecosystems</span><span class="stag">Data ingestion</span><span class="stag">BI & analytics</span><span class="stag">Edge-to-cloud</span><span class="stag">CV inference</span></div></div>
-        <div class="sg"><div class="sg-title">Leadership</div><div class="stags"><span class="stag">0→1 products</span><span class="stag">India hub building</span><span class="stag">100+ orgs</span><span class="stag">ARR ownership</span><span class="stag">Cross-border teams</span></div></div>
-        <div class="sg"><div class="sg-title">Builder stack</div><div class="stags"><span class="stag">Lovable</span><span class="stag">Vercel</span><span class="stag">GitHub</span><span class="stag">HTML/CSS</span><span class="stag">Substack</span></div></div>
-        <div class="sg"><div class="sg-title">Integrations</div><div class="stags"><span class="stag">Salesforce</span><span class="stag">MS Teams</span><span class="stag">Zoom</span><span class="stag">SAP</span><span class="stag">CRM / ERP</span></div></div>
-      </div>
-
-      <div class="sec-hd" style="margin-top:.5rem;"><span class="sec-lbl">Education</span><div class="sec-line"></div></div>
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-head">
+      <img class="portrait" src="portrait.jpg" alt="Srinivas Mullapudi"
+           onerror="this.style.display='none';document.getElementById('pf').style.display='flex';">
+      <div class="portrait-fallback" id="pf">SM</div>
       <div>
-        <div class="edu-row">
-          <div class="edu-dot"></div>
-          <div><div class="edu-inst">Indian School of Business (ISB)</div><div class="edu-deg">PGP in Management · Strategy & Leadership, Marketing</div></div>
-          <div class="edu-yr">2015–16</div>
-        </div>
-        <div class="edu-row">
-          <div class="edu-dot"></div>
-          <div><div class="edu-inst">JNTU Hyderabad</div><div class="edu-deg">B.Tech, Computer Science</div></div>
-          <div class="edu-yr">2000–04</div>
-        </div>
+        <h1>Srinivas <em>Mullapudi</em></h1>
+        <div class="role">Product leader and builder · Career coach and mentor</div>
       </div>
+    </div>
 
+    <p class="lede">
+      I don't just spec AI — <strong>I ship it, write about it, and build with it.</strong>
+      Twenty years of enterprise platforms, and I still open the editor myself.
+    </p>
+
+    <p class="now">
+      <span class="now-l">Now</span>
+      Writing, building, and talking to teams about their next AI product. Coaching and building careers.
+    </p>
+
+    <div class="status"><span class="dot"></span> Open to Director / VP Product and Head of AI roles in India and the US</div>
+
+    <div class="contact">
+      <a href="mailto:thisissubbu@gmail.com">thisissubbu@gmail.com</a>
+      <a href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">Ground Truth</a>
+      <a href="https://github.com/idlebrain2000" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/srinivasmullapudi" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
+</header>
 
-  <!-- ── CTA ── -->
-  <div class="cta">
-    <div class="cta-txt"><strong>Open to Director / VP Product roles</strong> in AI-native SaaS — India or US remote. I-140 approved · cap-exempt · no visa sponsorship needed.</div>
-    <a class="cta-btn" href="mailto:thisissubbu@gmail.com"><i class="ti ti-mail"></i> Get in touch</a>
+<!-- ═══════════ PROOF ═══════════ -->
+<div class="wrap">
+  <div class="proof">
+    <div>
+      <div class="proof-n">0 → 1</div>
+      <div class="proof-l"><b>Product.</b> AI and data platforms launched from India for US-headquartered companies</div>
+    </div>
+    <div>
+      <div class="proof-n">80+</div>
+      <div class="proof-l"><b>People.</b> Engineers and PMs in the product hub I built from zero</div>
+    </div>
+    <div>
+      <div class="proof-n">10 yrs</div>
+      <div class="proof-l"><b>Process.</b> Setting up India product hubs that run without me</div>
+    </div>
   </div>
+</div>
 
-</div><!-- /container -->
+<!-- ═══════════ WORK ═══════════ -->
+<section id="work">
+  <div class="wrap">
+    <div class="kicker">Work</div>
 
-<script>
-  function showTab(id, btn) {
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
-    document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('on'));
-    document.getElementById(id).classList.add('on');
-    btn.classList.add('on');
-  }
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Highspot</div>
+        <div class="job-when">Mar 2024 — May 2026</div>
+      </div>
+      <div class="job-role">Director PM · Analytics, Data Platform &amp; AI · owned 25% of ARR</div>
+      <div class="job-desc">
+        Architected the Nexus™ GTM and Deal Agents on RAG orchestration and vector pipelines.
+        Cut AI and permission latency <b>10x</b>. Shipped a tools catalog that decoupled AI from the data
+        layer, compressing agent time-to-market from months to days — and drove a <b>30% ARR uplift</b>.
+        Built the India product and engineering hub from zero to <b>80+ people</b>.
+      </div>
+    </div>
 
-  function toggleArticle(card) {
-    const isOn = card.classList.contains('on');
-    document.querySelectorAll('.acard').forEach(c => c.classList.remove('on'));
-    if (!isOn) card.classList.add('on');
-  }
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Innovapptive</div>
+        <div class="job-when">Dec 2022 — Feb 2024</div>
+      </div>
+      <div class="job-role">VP Product · BU head · 120-person org</div>
+      <div class="job-desc">
+        Owned vision and execution for a 120-person cross-functional org. Built two zero-to-one cloud-native
+        platforms, onboarded <b>10+ Fortune 500</b> customers, and <b>doubled cARR in 12 months</b>. Shipped a
+        computer-vision inference platform doing sub-3-second hazard detection for frontline workers.
+      </div>
+    </div>
 
-  function toggleExp(card) {
-    const isOn = card.classList.contains('on');
-    document.querySelectorAll('.ecard').forEach(c => c.classList.remove('on'));
-    if (!isOn) card.classList.add('on');
-  }
-</script>
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">e2open</div>
+        <div class="job-when">Apr 2016 — Nov 2022</div>
+      </div>
+      <div class="job-role">Director PM · Supply Chain Planning Suite · 15%+ of ARR</div>
+      <div class="job-desc">
+        Product lead for the Planning Suite — demand forecasting and promotions planning for global enterprises.
+        Merged Channel Data Management with Planning into one operational view: <b>15% cross-sell growth</b>,
+        <b>10% better forecast accuracy</b>.
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Earlier</div>
+        <div class="job-when">2004 — 2015</div>
+      </div>
+      <div class="job-role">Platinum DB Consulting · Global Information Systems · Tech Mahindra</div>
+      <div class="job-desc">
+        Seven years running enterprise delivery for US clients as a program manager, before that a programmer
+        analyst and a software engineer. The engineering foundation still shows up in how I evaluate systems.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WRITING ═══════════ -->
+<section id="write">
+  <div class="wrap">
+    <div class="kicker">
+      Ground Truth
+      <span class="sp"></span>
+      <a href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">Subscribe →</a>
+    </div>
+
+    <div class="gita">
+      <div class="gita-t">The <em>AI PM Gita</em></div>
+      <div class="gita-d">18 parvas. 18 lessons in AI product management, drawn from the Mahabharata and tested against real production failures. The essays below are excerpted chapters.</div>
+    </div>
+
+    <div class="essays">
+      <!-- Fallback if /api/posts is unreachable. Replaced live by posts.js. -->
+      <a class="essay" href="https://vasumullapudi.substack.com/p/do-boring-stuff" target="_blank" rel="noopener">
+        <div class="essay-body">
+          <div class="essay-top">
+            <div class="essay-t">Do Boring Stuff</div>
+            <div class="essay-d">Jul 8, 2026</div>
+          </div>
+          <div class="essay-s">The most successful people I know are also the most boring. On purpose.</div>
+        </div>
+      </a>
+      <a class="essay" href="https://vasumullapudi.substack.com/p/the-wave-that-built-modern-india" target="_blank" rel="noopener">
+        <div class="essay-body">
+          <div class="essay-top">
+            <div class="essay-t">The Wave That Built Modern India Is Breaking</div>
+            <div class="essay-d">Jul 1, 2026</div>
+          </div>
+          <div class="essay-s">A million families are picking an engineering branch. An insider's guide to choosing one in the AI era.</div>
+        </div>
+      </a>
+      <a class="essay" href="https://vasumullapudi.substack.com/p/schrodingers-ai-agent-simultaneously" target="_blank" rel="noopener">
+        <div class="essay-body">
+          <div class="essay-top">
+            <div class="essay-t">Schrödinger's AI Agent</div>
+            <div class="essay-d">Jun 10, 2026</div>
+          </div>
+          <div class="essay-s">88% of enterprise AI agents never reach production. Five failure autopsies.</div>
+        </div>
+      </a>
+    </div>
+
+    <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">All essays on Substack →</a>
+  </div>
+</section>
+
+<!-- ═══════════ BUILD ═══════════ -->
+<section id="build">
+  <div class="wrap">
+    <div class="kicker">Build <span class="sp"></span><a href="https://github.com/idlebrain2000" target="_blank" rel="noopener">github.com/idlebrain2000 →</a></div>
+
+    <div class="builds">
+      <p class="build-note">
+        I build with the same tools my teams use. <b>A PM who can't prototype can't push back on an
+        estimate, de-risk an agent architecture, or tell a demo from a product.</b>
+      </p>
+
+      <a class="build feat" href="https://www.youtube.com/watch?v=nIToE1x4n6o" target="_blank" rel="noopener">
+        <div class="build-n">Apicbook <span class="tag">Co-founder · 2020–22</span></div>
+        <div class="build-d">A startup blending storytelling with personalisation. Authored and shipped illustrated books for young kids — including <i>Hanuman &amp; The Little Girl</i>. Named Most Innovative Product by Business Mint, 2021.</div>
+      </a>
+      <a class="build" href="https://sway-site-blond.vercel.app" target="_blank" rel="noopener">
+        <div class="build-n">Sway AI Labs</div>
+        <div class="build-d">5-agent demand engine for Indian SMEs. Hand-coded, trilingual.</div>
+      </a>
+      <a class="build" href="https://aria-wise-advisor.lovable.app/" target="_blank" rel="noopener">
+        <div class="build-n">Aria — Voice Concierge</div>
+        <div class="build-d">AI voice agent qualifying real-estate leads by phone.</div>
+      </a>
+      <a class="build" href="https://sugapal-meal-mentor.lovable.app" target="_blank" rel="noopener">
+        <div class="build-n">SugaPal — Meal Mentor</div>
+        <div class="build-d">AI meal planning for blood-sugar management.</div>
+      </a>
+      <a class="build" href="https://dream-vid-home.lovable.app/" target="_blank" rel="noopener">
+        <div class="build-n">LuxeHome</div>
+        <div class="build-d">Video-tour discovery with an AI concierge for NRI buyers.</div>
+      </a>
+      <a class="build" href="https://github.com/idlebrain2000/workshop" target="_blank" rel="noopener">
+        <div class="build-n">workshop</div>
+        <div class="build-d">Public scratchpad. Ideas stress-tested before they ship.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ COACHING ═══════════ -->
+<section id="coaching">
+  <div class="wrap">
+    <div class="kicker">Coaching &amp; mentoring</div>
+
+    <p class="coach-lede">
+      I've hired, promoted and let go of product managers for twenty years. I coach the people on the
+      other side of that desk — <b>career decisions, product craft, and the leap into leadership</b> — and
+      I help US-headquartered companies stand up product hubs in India that actually own outcomes.
+    </p>
+
+    <a class="talk" href="https://www.youtube.com/watch?v=bwSBrpn-4o4" target="_blank" rel="noopener">
+      <div class="talk-thumb">
+        <img src="https://i.ytimg.com/vi/bwSBrpn-4o4/hqdefault.jpg" alt="" loading="lazy">
+        <span class="play"></span>
+      </div>
+      <div class="talk-body">
+        <div class="talk-t">From a Hiring Manager's Desk: What I Look for in a Product Manager</div>
+        <div class="talk-m">Institute of Product Leadership · 3 min</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ ELSEWHERE ═══════════ -->
+<section id="elsewhere" class="quiet">
+  <div class="wrap">
+    <div class="kicker">Elsewhere</div>
+    <p class="el-note">The other things I make when I'm not making software.</p>
+
+    <div class="els">
+      <a class="el" href="https://www.amazon.in/Hanuman-little-Girl-Diwali-Adventure/dp/B0BGZQHKP1" target="_blank" rel="noopener">
+        <span class="el-n">Hanuman &amp; The Little Girl</span>
+        <span class="el-d">A children's book, written and published. Amazon.</span>
+      </a>
+      <a class="el" href="https://podcasts.apple.com/us/podcast/mic-drop/id1514301334" target="_blank" rel="noopener">
+        <span class="el-n">Mic Drop</span>
+        <span class="el-d">A podcast. Apple Podcasts.</span>
+      </a>
+      <a class="el" href="https://maanasasanchara.blogspot.com/" target="_blank" rel="noopener">
+        <span class="el-n">మానస సంచర</span>
+        <span class="el-d">Poetry, in Telugu and English. Long-running.</span>
+      </a>
+      <a class="el" href="https://www.youtube.com/c/VasuMullapudi" target="_blank" rel="noopener">
+        <span class="el-n">YouTube</span>
+        <span class="el-d">Talks, readings and the occasional experiment.</span>
+      </a>
+      <a class="el" href="https://vasumullapudi.medium.com" target="_blank" rel="noopener">
+        <span class="el-n">Medium</span>
+        <span class="el-d">Earlier essays on product and leadership.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-h">Building something <em>AI-native</em>?</div>
+    <div class="cta-p">Open to Director / VP Product and Head of AI roles in India and the US.</div>
+    <div class="cta-p2">Also available for career coaching, product and leadership mentoring, and standing up GCCs and hubs in India.</div>
+    <a class="btn" href="mailto:thisissubbu@gmail.com">Get in touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:10px;">
+    <span>Hyderabad · Open to US remote</span>
+    <span>Hand-coded. <a href="https://github.com/idlebrain2000/Profile" target="_blank" rel="noopener">Source</a>.</span>
+  </div>
+</footer>
 
 <script defer src="/posts.js"></script>
 
