@@ -1,33 +1,17 @@
-srinimullapudi.com — site update bundle
-========================================
+srinimullapudi.com — site update bundle (v4)
+============================================
+The AI PM Gita section now features TWO real chapters from your manuscript:
+  • Parva 4  · The 3 Sins of an AI PM       (Duryodhana's three refusals)
+  • Parva 13 · Designing for When AI Gets It Wrong (Abhimanyu & the Chakravyuha)
+Plus: split book vs. Ground Truth newsletter, "Book" nav link, résumé/Calendly CTAs,
+testimonials, favicons, GA4.
 
-These 9 files go into the root of your GitHub repo: idlebrain2000/Profile
+UPLOAD TO THE ROOT of repo idlebrain2000/Profile:
+  index.html  (REPLACES existing) + the 8 asset files here.
 
-  index.html                     -> REPLACES the existing index.html
-  Srinivas_Mullapudi_Resume.pdf  -> NEW (2-column résumé with your photo; the "Download résumé" button links to it)
-  favicon.svg, favicon.ico,
-  favicon-16.png, favicon-32.png,
-  apple-touch-icon.png,
-  icon-192.png, icon-512.png      -> NEW (browser-tab / bookmark icons)
+  >>> ALSO ADD YOUR COVER IMAGE <<<
+  aipmgita-cover.jpg  -> AI PM Gita FRONT cover (portrait), EXACT name, repo root,
+                         same upload. ~800px wide / under ~500 KB.
 
-HOW TO MERGE (one commit, no terminal)
---------------------------------------
-1. Go to github.com/idlebrain2000/Profile  (main branch)
-2. Add file -> Upload files
-3. Drag in all 9 files above (drop at the repo root)
-4. Commit message: "Add résumé, CTAs, testimonials, analytics, favicons, Praise nav"
-5. Commit directly to main  ->  Commit changes
-6. Vercel auto-deploys in ~30-60s. Hard-refresh srinimullapudi.com.
-
-(Optional preview: choose "Create a new branch and start a pull request"
-instead at step 5; open the Vercel Preview link on the PR, then Merge.)
-
-WHAT CHANGED IN index.html
---------------------------
-- Favicon links + Google Analytics 4 tag (G-CRP3GRYDDY) in <head>
-- "Download résumé" + "Book a call" (Calendly) buttons in hero and Contact
-- New "What people say" testimonials section (3 LinkedIn recommendations)
-- "Praise" link added to the top nav
-- Embedded Substack signup in the Writing section
-- "Demo" badges on Sway, Aria, SugaPal, LuxeHome
-- Footer availability line clarified (US-remote, overlaps US hours)
+MERGE: github.com/idlebrain2000/Profile > Add file > Upload files >
+drag all 9 files + aipmgita-cover.jpg > Commit to main. Vercel deploys in ~30-60s.

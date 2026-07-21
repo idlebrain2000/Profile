@@ -312,10 +312,26 @@
 
   /* ─────────── WRITING ─────────── */
   .gita {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
     border-left: 2px solid var(--green);
     padding: 2px 0 2px 18px;
     margin-bottom: 36px;
   }
+  .gita-cover { flex-shrink: 0; display: block; }
+  .gita-cover img {
+    width: 128px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    box-shadow: 0 6px 22px rgba(0,0,0,.16);
+    transition: transform .3s cubic-bezier(.2,.7,.3,1);
+  }
+  .gita-cover:hover img { transform: scale(1.03); }
+  .gita-body { flex: 1; min-width: 0; }
+  @media (max-width: 560px) { .gita-cover img { width: 96px; } }
   .gita-t {
     font-family: 'DM Serif Display', serif;
     font-size: 19px;
@@ -643,6 +659,47 @@
     background: var(--bg-2);
   }
   .sub-embed iframe { display: block; width: 100%; border: 0; }
+
+  /* ─────────── AI PM GITA (BOOK) ─────────── */
+  .kick-note { color: var(--text-3); }
+  .book-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .book-blurb { font-size: 16px; line-height: 1.6; color: var(--text-2); }
+  .book-blurb b { color: var(--text); font-weight: 500; }
+  .book-blurb em { font-family: 'DM Serif Display', serif; font-style: italic; color: var(--green); }
+
+  .parva { margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .parva-h { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .parva-t {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    line-height: 1.3;
+    transition: color .15s;
+  }
+  .parva-t:hover { color: var(--green); }
+  .parva-d { font-size: 15px; color: var(--text-2); margin-top: 6px; max-width: 62ch; }
+  .pullquote {
+    margin-top: 14px;
+    border-left: 2px solid var(--green);
+    padding: 2px 0 2px 16px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 60ch;
+  }
+
+  /* ─────────── GROUND TRUTH INTRO + SUBSCRIBE ─────────── */
+  .gt-intro { font-size: 16px; color: var(--text-2); margin-bottom: 26px; max-width: 60ch; }
+  .subscribe { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--rule); }
+  .subscribe-t { font-family: 'DM Serif Display', serif; font-size: 19px; margin-bottom: 12px; }
 </style>
 </head>
 
@@ -654,6 +711,7 @@
     <span class="nav-me">Srinivas Mullapudi</span>
     <a href="#work">Work</a>
     <a href="#praise">Praise</a>
+    <a href="#book">Book</a>
     <a href="#write">Writing</a>
     <a href="#build">Build</a>
     <a href="#coaching">Coaching</a>
@@ -801,19 +859,53 @@
   </div>
 </section>
 
-<!-- ═══════════ WRITING ═══════════ -->
-<section id="write">
+<!-- ═══════════ THE AI PM GITA (BOOK) ═══════════ -->
+<section id="book">
   <div class="wrap">
-    <div class="kicker">
-      Ground Truth
-      <span class="sp"></span>
-      <a href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">Subscribe →</a>
-    </div>
+    <div class="kicker">The AI PM Gita <span class="sp"></span><span class="kick-note">Book · in progress</span></div>
 
     <div class="gita">
-      <div class="gita-t">The <em>AI PM Gita</em></div>
-      <div class="gita-d">18 parvas. 18 lessons in AI product management, drawn from the Mahabharata and tested against real production failures. The essays below are excerpted chapters.</div>
+      <a class="gita-cover" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">
+        <img src="/aipmgita-cover.jpg" alt="The AI PM Gita — 18 lessons on building AI products, drawn from the Mahabharata" loading="lazy">
+      </a>
+      <div class="gita-body">
+        <div class="book-tag">Timeless wisdom · Modern products</div>
+        <p class="book-blurb">
+          The Mahabharata isn't just a story of war — it's a manual for choices. <em>The AI PM Gita</em>
+          translates <b>18 parvas into 18 lessons</b> for building AI products that create impact, earn
+          trust, and endure — each one tested against real production failures.
+        </p>
+      </div>
     </div>
+
+    <div class="parva">
+      <div class="parva-h">
+        <span class="parva-t">The 3 Sins of an AI PM</span>
+        <span class="tag">Parva 4</span>
+      </div>
+      <p class="parva-d">Duryodhana was offered peace three times and refused three times — each refusal a distinct sin: hype without depth, speed without safety, and features without purpose. Every failed AI product walks through at least one of these gates.</p>
+      <blockquote class="pullquote">"Failed products are rarely built in ignorance. They're built by teams who knew — and shipped anyway."</blockquote>
+    </div>
+
+    <div class="parva">
+      <div class="parva-h">
+        <a class="parva-t" href="https://vasumullapudi.substack.com/p/you-didnt-build-a-product-you-built" target="_blank" rel="noopener">Designing for When AI Gets It Wrong</a>
+        <span class="tag">Parva 13</span>
+      </div>
+      <p class="parva-d">Abhimanyu learned to enter the Chakravyuha but never heard how to exit — a frame for AI features brilliantly designed for entry, with no way out. Introduces the four failure modes and the Three Rings: Signal, Threshold, Exit.</p>
+      <blockquote class="pullquote">"The model learned to please, not to help. Nobody files a bug report that says 'the AI was too agreeable.' That's what makes sycophancy the most dangerous failure of all."</blockquote>
+    </div>
+
+    <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">Read the parvas as they publish →</a>
+  </div>
+</section>
+
+<!-- ═══════════ GROUND TRUTH (WRITING) ═══════════ -->
+<section id="write">
+  <div class="wrap">
+    <div class="kicker">Ground Truth <span class="sp"></span><a href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">vasumullapudi.substack.com →</a></div>
+
+    <p class="gt-intro">Field notes on AI product management, GTM, agentic systems, and the business behind the hype. Many topics, roughly weekly — the AI PM Gita chapters publish here too.</p>
 
     <div class="essays">
       <!-- Fallback if /api/posts is unreachable. Replaced live by posts.js. -->
@@ -848,8 +940,11 @@
 
     <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">All essays on Substack →</a>
 
-    <div class="sub-embed">
-      <iframe src="https://vasumullapudi.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
+    <div class="subscribe">
+      <div class="subscribe-t">Get Ground Truth in your inbox</div>
+      <div class="sub-embed">
+        <iframe src="https://vasumullapudi.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
+      </div>
     </div>
   </div>
 </section>
