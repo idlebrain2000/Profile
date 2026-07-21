@@ -9,6 +9,22 @@
 <meta name="twitter:card" content="summary_large_image">
 <title>Srinivas Mullapudi — AI Product Executive</title>
 
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0F6E56">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CRP3GRYDDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CRP3GRYDDY');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -579,6 +595,54 @@
     * { animation: none !important; transition: none !important; }
     html { scroll-behavior: auto; }
   }
+
+  /* ─────────── RÉSUMÉ / BOOKING BUTTONS ─────────── */
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    animation: rise .6s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay: .19s;
+  }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--text);
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green); opacity: 1; }
+
+  /* ─────────── TESTIMONIALS ─────────── */
+  .tms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 720px) { .tms { grid-template-columns: 1fr; } }
+  .tm {
+    padding: 24px;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+  }
+  .tm-q { font-size: 15px; line-height: 1.6; color: var(--text-2); margin-bottom: 16px; }
+  .tm-n { display: inline-block; font-size: 15px; color: var(--text); transition: color .15s; }
+  .tm-n:hover { color: var(--green); }
+  .tm-r {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--text-3);
+    margin-top: 3px;
+    line-height: 1.45;
+  }
+
+  /* ─────────── NEWSLETTER EMBED ─────────── */
+  .sub-embed {
+    margin-top: 30px;
+    max-width: 480px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .sub-embed iframe { display: block; width: 100%; border: 0; }
 </style>
 </head>
 
@@ -589,6 +653,7 @@
   <div class="nav-in">
     <span class="nav-me">Srinivas Mullapudi</span>
     <a href="#work">Work</a>
+    <a href="#praise">Praise</a>
     <a href="#write">Writing</a>
     <a href="#build">Build</a>
     <a href="#coaching">Coaching</a>
@@ -620,6 +685,11 @@
     </p>
 
     <div class="status"><span class="dot"></span> Open to Director / VP Product and Head of AI roles in India and the US</div>
+
+    <div class="btn-row">
+      <a class="btn" href="/Srinivas_Mullapudi_Resume.pdf" download>Download résumé</a>
+      <a class="btn btn-ghost" href="https://calendly.com/srini_mullapudi" target="_blank" rel="noopener">Book a call</a>
+    </div>
 
     <div class="contact">
       <a href="mailto:thisissubbu@gmail.com">thisissubbu@gmail.com</a>
@@ -707,6 +777,30 @@
   </div>
 </section>
 
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section id="praise">
+  <div class="wrap">
+    <div class="kicker">What people say</div>
+    <div class="tms">
+      <div class="tm">
+        <div class="tm-q">"So lucky to have met Vasu at ISB. He always encourages and motivates people around him to aim high and genuinely helps them when the need arises — a genuine and compassionate leader who puts everyone else before him."</div>
+        <a class="tm-n" href="https://www.linkedin.com/in/balajisundeep/" target="_blank" rel="noopener">Balaji Sundeep →</a>
+        <div class="tm-r">Product Leader, CRED · ISB</div>
+      </div>
+      <div class="tm">
+        <div class="tm-q">"Inspiring leader, amazing mentor, and wonderful coach. His thoughts are always practical and on par with current trends; he motivates us to love what we do and respects our ideas."</div>
+        <a class="tm-n" href="https://www.linkedin.com/in/ramyaharikanaishadham/" target="_blank" rel="noopener">Ramya Harika Ayachitula →</a>
+        <div class="tm-r">Supply Chain Transformation Leader · e2open</div>
+      </div>
+      <div class="tm">
+        <div class="tm-q">"Srini is a rare combination of creative, quant, and operations skill sets. You can count on his out-of-the-box ideas even in pressure situations — I'd definitely recommend Srini for P&amp;L responsibilities."</div>
+        <a class="tm-n" href="https://www.linkedin.com/in/pawan-deshmukh-18524a13/" target="_blank" rel="noopener">Pawan Deshmukh →</a>
+        <div class="tm-r">Agent Management Products, Microsoft · ISB</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ WRITING ═══════════ -->
 <section id="write">
   <div class="wrap">
@@ -753,6 +847,10 @@
     </div>
 
     <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">All essays on Substack →</a>
+
+    <div class="sub-embed">
+      <iframe src="https://vasumullapudi.substack.com/embed" width="480" height="150" frameborder="0" scrolling="no"></iframe>
+    </div>
   </div>
 </section>
 
@@ -772,19 +870,19 @@
         <div class="build-d">A startup blending storytelling with personalisation. Authored and shipped illustrated books for young kids — including <i>Hanuman &amp; The Little Girl</i>. Named Most Innovative Product by Business Mint, 2021.</div>
       </a>
       <a class="build" href="https://sway-site-blond.vercel.app" target="_blank" rel="noopener">
-        <div class="build-n">Sway AI Labs</div>
+        <div class="build-n">Sway AI Labs <span class="tag">Demo</span></div>
         <div class="build-d">5-agent demand engine for Indian SMEs. Hand-coded, trilingual.</div>
       </a>
       <a class="build" href="https://aria-wise-advisor.lovable.app/" target="_blank" rel="noopener">
-        <div class="build-n">Aria — Voice Concierge</div>
+        <div class="build-n">Aria — Voice Concierge <span class="tag">Demo</span></div>
         <div class="build-d">AI voice agent qualifying real-estate leads by phone.</div>
       </a>
       <a class="build" href="https://sugapal-meal-mentor.lovable.app" target="_blank" rel="noopener">
-        <div class="build-n">SugaPal — Meal Mentor</div>
+        <div class="build-n">SugaPal — Meal Mentor <span class="tag">Demo</span></div>
         <div class="build-d">AI meal planning for blood-sugar management.</div>
       </a>
       <a class="build" href="https://dream-vid-home.lovable.app/" target="_blank" rel="noopener">
-        <div class="build-n">LuxeHome</div>
+        <div class="build-n">LuxeHome <span class="tag">Demo</span></div>
         <div class="build-d">Video-tour discovery with an AI concierge for NRI buyers.</div>
       </a>
       <a class="build" href="https://github.com/idlebrain2000/workshop" target="_blank" rel="noopener">
@@ -856,13 +954,17 @@
     <div class="cta-h">Building something <em>AI-native</em>?</div>
     <div class="cta-p">Open to Director / VP Product and Head of AI roles in India and the US.</div>
     <div class="cta-p2">Also available for career coaching, product and leadership mentoring, and standing up GCCs and hubs in India.</div>
-    <a class="btn" href="mailto:thisissubbu@gmail.com">Get in touch</a>
+    <div class="btn-row" style="justify-content:center;">
+      <a class="btn" href="mailto:thisissubbu@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="https://calendly.com/srini_mullapudi" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="/Srinivas_Mullapudi_Resume.pdf" download>Download résumé</a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:10px;">
-    <span>Hyderabad · Open to US remote</span>
+    <span>Hyderabad · Open to US-remote roles · comfortable overlapping US hours</span>
     <span>Hand-coded. <a href="https://github.com/idlebrain2000/Profile" target="_blank" rel="noopener">Source</a>.</span>
   </div>
 </footer>
