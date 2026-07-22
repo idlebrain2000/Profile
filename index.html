@@ -628,27 +628,6 @@
   }
   .btn-ghost:hover { border-color: var(--green); color: var(--green); opacity: 1; }
 
-  /* ─────────── TESTIMONIALS ─────────── */
-  .tms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  @media (max-width: 720px) { .tms { grid-template-columns: 1fr; } }
-  .tm {
-    padding: 24px;
-    background: var(--bg-2);
-    border: 1px solid var(--rule);
-    border-radius: 12px;
-  }
-  .tm-q { font-size: 15px; line-height: 1.6; color: var(--text-2); margin-bottom: 16px; }
-  .tm-n { display: inline-block; font-size: 15px; color: var(--text); transition: color .15s; }
-  .tm-n:hover { color: var(--green); }
-  .tm-r {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: .04em;
-    color: var(--text-3);
-    margin-top: 3px;
-    line-height: 1.45;
-  }
-
   /* ─────────── NEWSLETTER EMBED ─────────── */
   .sub-embed {
     margin-top: 30px;
@@ -700,6 +679,50 @@
   .gt-intro { font-size: 16px; color: var(--text-2); margin-bottom: 26px; max-width: 60ch; }
   .subscribe { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--rule); }
   .subscribe-t { font-family: 'DM Serif Display', serif; font-size: 19px; margin-bottom: 12px; }
+
+  /* ─────────── NEWS & EVENTS ─────────── */
+  .events { display: flex; flex-direction: column; }
+  .event {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    transition: padding-left .22s ease;
+  }
+  .event:first-child { padding-top: 0; }
+  .event:last-child { border-bottom: none; }
+  .event:hover { padding-left: 6px; }
+  .event:hover .event-t { color: var(--green); }
+  .event-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--green);
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 112px;
+    padding-top: 4px;
+    letter-spacing: .02em;
+  }
+  .event-body { flex: 1; min-width: 0; }
+  .event-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .event-t { font-family: 'DM Serif Display', serif; font-size: 19px; line-height: 1.3; transition: color .15s; }
+  .event-d { font-size: 15px; color: var(--text-2); margin-top: 4px; max-width: 60ch; }
+  .event-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 2px 9px;
+    white-space: nowrap;
+  }
+  .event-tag.upcoming { color: var(--green); border: 1px solid color-mix(in srgb, var(--green) 38%, transparent); }
+  .event-tag.past { color: var(--text-3); border: 1px solid var(--rule); }
+  @media (max-width: 560px) {
+    .event { flex-direction: column; gap: 4px; }
+    .event-date { width: auto; padding-top: 0; }
+  }
 </style>
 </head>
 
@@ -710,9 +733,9 @@
   <div class="nav-in">
     <span class="nav-me">Srinivas Mullapudi</span>
     <a href="#work">Work</a>
-    <a href="#praise">Praise</a>
-    <a href="#book">Book</a>
+    <a href="/Gita">Book</a>
     <a href="#write">Writing</a>
+    <a href="#news">News</a>
     <a href="#build">Build</a>
     <a href="#coaching">Coaching</a>
     <a class="out" href="#contact">Contact</a>
@@ -835,32 +858,8 @@
   </div>
 </section>
 
-<!-- ═══════════ TESTIMONIALS ═══════════ -->
-<section id="praise">
-  <div class="wrap">
-    <div class="kicker">What people say</div>
-    <div class="tms">
-      <div class="tm">
-        <div class="tm-q">"So lucky to have met Vasu at ISB. He always encourages and motivates people around him to aim high and genuinely helps them when the need arises — a genuine and compassionate leader who puts everyone else before him."</div>
-        <a class="tm-n" href="https://www.linkedin.com/in/balajisundeep/" target="_blank" rel="noopener">Balaji Sundeep →</a>
-        <div class="tm-r">Product Leader, CRED · ISB</div>
-      </div>
-      <div class="tm">
-        <div class="tm-q">"Inspiring leader, amazing mentor, and wonderful coach. His thoughts are always practical and on par with current trends; he motivates us to love what we do and respects our ideas."</div>
-        <a class="tm-n" href="https://www.linkedin.com/in/ramyaharikanaishadham/" target="_blank" rel="noopener">Ramya Harika Ayachitula →</a>
-        <div class="tm-r">Supply Chain Transformation Leader · e2open</div>
-      </div>
-      <div class="tm">
-        <div class="tm-q">"Srini is a rare combination of creative, quant, and operations skill sets. You can count on his out-of-the-box ideas even in pressure situations — I'd definitely recommend Srini for P&amp;L responsibilities."</div>
-        <a class="tm-n" href="https://www.linkedin.com/in/pawan-deshmukh-18524a13/" target="_blank" rel="noopener">Pawan Deshmukh →</a>
-        <div class="tm-r">Agent Management Products, Microsoft · ISB</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ THE AI PM GITA (BOOK) ═══════════ -->
-<section id="book">
+<section id="Gita">
   <div class="wrap">
     <div class="kicker">The AI PM Gita <span class="sp"></span><span class="kick-note">Book · in progress</span></div>
 
@@ -949,6 +948,41 @@
   </div>
 </section>
 
+<!-- ═══════════ NEWS & EVENTS ═══════════ -->
+<section id="news">
+  <div class="wrap">
+    <div class="kicker">News &amp; Events</div>
+
+    <div class="events">
+      <!-- To add an event: copy one .event block below and edit the date, title, tag and text.
+           Tag options: <span class="event-tag upcoming">Upcoming</span> or <span class="event-tag past">Past</span> -->
+
+      <div class="event">
+        <div class="event-date">2026 · TBA</div>
+        <div class="event-body">
+          <div class="event-top">
+            <div class="event-t">The AI PM Gita — Book Launch</div>
+            <span class="event-tag upcoming">Upcoming</span>
+          </div>
+          <div class="event-d">Launch of the book: 18 parvas on building AI products, drawn from the Mahabharata. Date and venue to be announced.</div>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">2026 · TBA</div>
+        <div class="event-body">
+          <div class="event-top">
+            <div class="event-t">Orientation Session · RCM</div>
+            <span class="event-tag upcoming">Upcoming</span>
+          </div>
+          <div class="event-d">A session for product leaders and students at RCM on breaking into AI product management. Details to follow.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ BUILD ═══════════ -->
 <section id="build">
   <div class="wrap">
@@ -979,10 +1013,6 @@
       <a class="build" href="https://dream-vid-home.lovable.app/" target="_blank" rel="noopener">
         <div class="build-n">LuxeHome <span class="tag">Demo</span></div>
         <div class="build-d">Video-tour discovery with an AI concierge for NRI buyers.</div>
-      </a>
-      <a class="build" href="https://github.com/idlebrain2000/workshop" target="_blank" rel="noopener">
-        <div class="build-n">workshop</div>
-        <div class="build-d">Public scratchpad. Ideas stress-tested before they ship.</div>
       </a>
     </div>
   </div>
@@ -1065,6 +1095,29 @@
 </footer>
 
 <script defer src="/posts.js"></script>
+
+<script>
+  /* Clean /Gita route for the AI PM Gita section — no hash. */
+  (function () {
+    function goGita(smooth) {
+      var el = document.getElementById('Gita');
+      if (el) el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' });
+    }
+    // Direct visit to /Gita (served via Vercel rewrite): jump to the section.
+    if (/^\/gita\/?$/i.test(location.pathname)) {
+      document.addEventListener('DOMContentLoaded', function () { goGita(false); });
+    }
+    // "Book" nav link: smooth-scroll in-page and show /Gita in the URL (no reload).
+    document.addEventListener('DOMContentLoaded', function () {
+      var link = document.querySelector('a[href="/Gita"]');
+      if (link) link.addEventListener('click', function (e) {
+        e.preventDefault();
+        goGita(true);
+        try { if (location.pathname.toLowerCase() !== '/gita') history.pushState({}, '', '/Gita'); } catch (_) {}
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
