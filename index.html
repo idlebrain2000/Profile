@@ -409,6 +409,8 @@
     padding-bottom: 2px;
   }
   .more:hover { border-bottom-color: var(--green); }
+  .more-row { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; }
+  .more-row .more { margin-top: 0; }
 
   /* ─────────── BUILD ─────────── */
   .builds { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
@@ -947,7 +949,10 @@
       </a>
     </div>
 
-    <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">All essays on Substack →</a>
+    <div class="more-row">
+      <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">All essays on Substack →</a>
+      <a class="more" href="https://vasumullapudi.medium.com" target="_blank" rel="noopener">Earlier essays on Medium →</a>
+    </div>
 
     <div class="subscribe">
       <div class="subscribe-t">Get Ground Truth in your inbox</div>
@@ -1076,10 +1081,6 @@
       <a class="el" href="https://www.youtube.com/c/VasuMullapudi" target="_blank" rel="noopener">
         <span class="el-n">YouTube</span>
         <span class="el-d">Talks, readings and the occasional experiment.</span>
-      </a>
-      <a class="el" href="https://vasumullapudi.medium.com" target="_blank" rel="noopener">
-        <span class="el-n">Medium</span>
-        <span class="el-d">Earlier essays on product and leadership.</span>
       </a>
     </div>
   </div>
