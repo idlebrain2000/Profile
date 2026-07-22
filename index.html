@@ -694,20 +694,26 @@
   .event:last-child { border-bottom: none; }
   .event:hover { padding-left: 6px; }
   .event:hover .event-t { color: var(--green); }
-  .event-date {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--green);
-    white-space: nowrap;
+  .event-thumb {
+    width: 76px;
+    height: 76px;
     flex-shrink: 0;
-    width: 112px;
-    padding-top: 4px;
-    letter-spacing: .02em;
+    border-radius: 8px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    overflow: hidden;
   }
+  .event-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+  .event-thumb.thumb-dark { background: #14140F; border-color: rgba(255,255,255,.12); padding: 11px; }
   .event-body { flex: 1; min-width: 0; }
   .event-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .event-t { font-family: 'DM Serif Display', serif; font-size: 19px; line-height: 1.3; transition: color .15s; }
-  .event-d { font-size: 15px; color: var(--text-2); margin-top: 4px; max-width: 60ch; }
+  .event-meta { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .05em; color: var(--green); margin-top: 5px; }
+  .event-d { font-size: 15px; color: var(--text-2); margin-top: 6px; max-width: 60ch; }
   .event-tag {
     font-family: 'DM Mono', monospace;
     font-size: 9.5px;
@@ -720,8 +726,7 @@
   .event-tag.upcoming { color: var(--green); border: 1px solid color-mix(in srgb, var(--green) 38%, transparent); }
   .event-tag.past { color: var(--text-3); border: 1px solid var(--rule); }
   @media (max-width: 560px) {
-    .event { flex-direction: column; gap: 4px; }
-    .event-date { width: auto; padding-top: 0; }
+    .event-thumb { width: 60px; height: 60px; }
   }
 </style>
 </head>
@@ -733,7 +738,7 @@
   <div class="nav-in">
     <span class="nav-me">Srinivas Mullapudi</span>
     <a href="#work">Work</a>
-    <a href="/Gita">Book</a>
+    <a href="/Gita">Books</a>
     <a href="#write">Writing</a>
     <a href="#news">News</a>
     <a href="#build">Build</a>
@@ -864,7 +869,7 @@
     <div class="kicker">The AI PM Gita <span class="sp"></span><span class="kick-note">Book · in progress</span></div>
 
     <div class="gita">
-      <a class="gita-cover" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">
+      <a class="gita-cover" href="/aipm-gita-brochure.html">
         <img src="/aipmgita-cover.jpg" alt="The AI PM Gita — 18 lessons on building AI products, drawn from the Mahabharata" loading="lazy">
       </a>
       <div class="gita-body">
@@ -895,7 +900,7 @@
       <blockquote class="pullquote">"The model learned to please, not to help. Nobody files a bug report that says 'the AI was too agreeable.' That's what makes sycophancy the most dangerous failure of all."</blockquote>
     </div>
 
-    <a class="more" href="https://vasumullapudi.substack.com/archive" target="_blank" rel="noopener">Read the parvas as they publish →</a>
+    <a class="more" href="/aipm-gita-brochure.html">Know more about the book →</a>
   </div>
 </section>
 
@@ -954,30 +959,32 @@
     <div class="kicker">News &amp; Events</div>
 
     <div class="events">
-      <!-- To add an event: copy one .event block below and edit the date, title, tag and text.
+      <!-- To add an event: copy one <a class="event"> block below and edit the thumbnail, title, date, tag and text.
            Tag options: <span class="event-tag upcoming">Upcoming</span> or <span class="event-tag past">Past</span> -->
 
-      <div class="event">
-        <div class="event-date">2026 · TBA</div>
+      <a class="event" href="/aipm-gita-brochure.html">
+        <div class="event-thumb"><img src="/aipmgita-cover.jpg" alt="The AI PM Gita — book cover" loading="lazy"></div>
         <div class="event-body">
           <div class="event-top">
             <div class="event-t">The AI PM Gita — Book Launch</div>
             <span class="event-tag upcoming">Upcoming</span>
           </div>
-          <div class="event-d">Launch of the book: 18 parvas on building AI products, drawn from the Mahabharata. Date and venue to be announced.</div>
+          <div class="event-meta">20 August 2026</div>
+          <div class="event-d">Launch of the book: 18 parvas on building AI products, drawn from the Mahabharata.</div>
         </div>
-      </div>
+      </a>
 
-      <div class="event">
-        <div class="event-date">2026 · TBA</div>
+      <a class="event" href="https://rcmb.in/" target="_blank" rel="noopener">
+        <div class="event-thumb thumb-dark"><img src="/rcmb-header-logo.svg" alt="Regional College of Management, Bangalore" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','RCM')"></div>
         <div class="event-body">
           <div class="event-top">
-            <div class="event-t">Orientation Session · RCM</div>
+            <div class="event-t">Orientation Session · RCM Bangalore</div>
             <span class="event-tag upcoming">Upcoming</span>
           </div>
-          <div class="event-d">A session for product leaders and students at RCM on breaking into AI product management. Details to follow.</div>
+          <div class="event-meta">19–20 August 2026</div>
+          <div class="event-d">Sessions for the incoming cohort at Regional College of Management, Bangalore, on building a career in AI product management.</div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -994,10 +1001,6 @@
         estimate, de-risk an agent architecture, or tell a demo from a product.</b>
       </p>
 
-      <a class="build feat" href="https://www.youtube.com/watch?v=nIToE1x4n6o" target="_blank" rel="noopener">
-        <div class="build-n">Apicbook <span class="tag">Co-founder · 2020–22</span></div>
-        <div class="build-d">A startup blending storytelling with personalisation. Authored and shipped illustrated books for young kids — including <i>Hanuman &amp; The Little Girl</i>. Named Most Innovative Product by Business Mint, 2021.</div>
-      </a>
       <a class="build" href="https://sway-site-blond.vercel.app" target="_blank" rel="noopener">
         <div class="build-n">Sway AI Labs <span class="tag">Demo</span></div>
         <div class="build-d">5-agent demand engine for Indian SMEs. Hand-coded, trilingual.</div>
@@ -1013,6 +1016,10 @@
       <a class="build" href="https://dream-vid-home.lovable.app/" target="_blank" rel="noopener">
         <div class="build-n">LuxeHome <span class="tag">Demo</span></div>
         <div class="build-d">Video-tour discovery with an AI concierge for NRI buyers.</div>
+      </a>
+      <a class="build feat" href="https://www.youtube.com/watch?v=nIToE1x4n6o" target="_blank" rel="noopener">
+        <div class="build-n">Apicbook <span class="tag">Co-founder · 2020–22</span></div>
+        <div class="build-d">A startup blending storytelling with personalisation. Authored and shipped illustrated books for young kids — including <i>Hanuman &amp; The Little Girl</i>. Named Most Innovative Product by Business Mint, 2021.</div>
       </a>
     </div>
   </div>
