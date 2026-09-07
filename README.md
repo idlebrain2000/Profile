@@ -17,11 +17,35 @@ mode, and there's no horizontal overflow at 390px.
 
 ## Before you push — three things
 
-### 1. Fill in `assets/media.js`
+### 1. Fill in `assets/media.js`  ← THIS IS WHAT BROKE
 
-It currently lists placeholder filenames. Replace them with what's actually in your
-`/Videos` and `/Photos` folders. Filenames are **case-sensitive** on Vercel —
-`Photo.JPG` and `photo.jpg` are different files.
+`media.js` ships with **placeholder filenames**. If you push without changing them,
+every photo and video 404s and the slides render blank — only the YouTube slide works,
+because it doesn't depend on your files. That is exactly what happened on the live site:
+
+```
+404  /Photos/rcmb-stage.jpg
+404  /Photos/rcmb-audience.jpg
+404  /Photos/rcmb-signing.jpg
+404  /Videos/signing.mp4
+404  /Photos/poster-signing.jpg
+```
+
+Replace them with what's actually in your `/Videos` and `/Photos` folders. Filenames are
+**case-sensitive** on Vercel — `Photo.JPG` and `photo.jpg` are different files, even
+though they're the same file on your Mac. That difference is the single most common
+cause of images that work locally and break in production.
+
+To see what you have:
+
+```bash
+ls Photos Videos
+```
+
+`gallery.js` now HEAD-checks every file on load. Anything missing is dropped from the
+carousel instead of showing a blank box, and the browser console lists each 404 by path
+— so if a slide is absent, open DevTools and the console tells you which filename is
+wrong.
 
 Each self-hosted video needs a poster JPG, or the slide is a black rectangle until
 someone presses play. `tools/optimize-media.sh` generates them.
@@ -90,7 +114,8 @@ the title plus "Out now on Amazon" on the right.
 - Sits between the book and Ground Truth
 - Carousel of launch photos and videos, native scroll-snap, no library
 - Swipes on mobile, arrow keys on desktop, dot indicators
-- Videos are `preload="none"` with poster frames; only one plays at a time
+- Videos load metadata only until played; only one plays at a time
+- Missing files are dropped and named in the console, never left as blank boxes
 - If `media.js` is empty the whole section hides itself rather than showing an empty box
 
 **News**

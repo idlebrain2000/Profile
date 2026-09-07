@@ -21,13 +21,13 @@
 
     if (!Array.isArray(media) || media.length === 0) {
       // Nothing to show — hide the whole section rather than render an empty box.
-      var section = track.closest('.gallery-section');
-      if (section) section.hidden = true;
+      hideSection(track);
       return;
     }
 
     var slides = [];
     var dotEls = [];
+    var missing = [];
 
     media.forEach(function (item, i) {
       var slide = buildSlide(item, track);
@@ -43,14 +43,74 @@
         dot.addEventListener('click', function () { scrollToSlide(track, slide); });
         dots.appendChild(dot);
         dotEls.push(dot);
+        slide._dot = dot;
       }
     });
 
     if (slides.length === 0) return;
 
+    // A file that 404s is dropped rather than left as a blank rectangle.
+    // Anything removed is reported in the console so the cause is obvious.
+    function drop(slide, src) {
+      var i = slides.indexOf(slide);
+      if (i === -1) return;
+      slides.splice(i, 1);
+      if (slide._dot) {
+        var j = dotEls.indexOf(slide._dot);
+        if (j !== -1) dotEls.splice(j, 1);
+        slide._dot.remove();
+      }
+      slide.remove();
+      missing.push(src);
+
+      if (slides.length === 0) hideSection(track);
+      else if (dotEls.length) dotEls[0].setAttribute('aria-current', 'true');
+
+      clearTimeout(drop._t);
+      drop._t = setTimeout(function () {
+        console.warn(
+          '[gallery] ' + missing.length + ' file(s) missing — slides removed.\n' +
+          missing.map(function (m) { return '  404  ' + m; }).join('\n') +
+          '\nCheck the filenames in /assets/media.js against what is actually in ' +
+          '/Photos and /Videos. Paths are case-sensitive.'
+        );
+      }, 200);
+    }
+
+    slides.slice().forEach(function (slide) {
+      var el = slide.firstElementChild;
+      if (!el || el.tagName === 'IFRAME') return;   // YouTube handles its own errors
+
+      var src = el.getAttribute('src') || '(no src)';
+
+      // Backstop: fires if the browser requests the file and it fails.
+      el.addEventListener('error', function () { drop(slide, src); });
+
+      // An <img> that already failed before this handler attached.
+      if (el.tagName === 'IMG' && el.complete && el.naturalWidth === 0) {
+        drop(slide, src);
+        return;
+      }
+
+      // Primary check. loading="lazy" means an off-screen image is never
+      // requested, so no error event ever fires and a missing file would sit
+      // there as a blank rectangle. A HEAD request costs no body download and
+      // catches it regardless of scroll position.
+      if (typeof fetch === 'function' && src !== '(no src)') {
+        fetch(src, { method: 'HEAD' })
+          .then(function (r) { if (!r.ok) drop(slide, src); })
+          .catch(function () { /* transient/offline — leave it to the error event */ });
+      }
+    });
+
     wireNav(track, slides);
     wireDots(track, slides, dotEls);
     wireKeyboard(track, slides);
+  }
+
+  function hideSection(track) {
+    var section = track.closest('.gallery-section');
+    if (section) section.hidden = true;
   }
 
   /* --- slide construction ------------------------------------------------ */
@@ -69,7 +129,7 @@
       mediaEl.src = item.src;
       if (item.poster) mediaEl.poster = item.poster;
       mediaEl.controls = true;
-      mediaEl.preload = 'none';          // don't download until asked
+      mediaEl.preload = 'metadata';      // metadata only: enough to detect a 404, not the whole file
       mediaEl.playsInline = true;
       mediaEl.setAttribute('playsinline', '');   // iOS Safari
       // Only one video plays at a time.
