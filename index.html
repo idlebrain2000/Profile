@@ -3,11 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Srinivas Mullapudi — AI product leader and builder. Twenty years of enterprise platforms. Writes Ground Truth. Coaches and mentors product leaders.">
-<meta property="og:title" content="Srinivas Mullapudi — Product Leader &amp; Builder">
-<meta property="og:description" content="I ship AI, write about it, and build with the same tools my teams use. Open to Director / VP Product and Head of AI roles in India and the US.">
+<meta name="description" content="Director PM at Highspot. Author of The AI Product Manager Gita — 18 timeless lessons from the Mahabharata for building AI products. Out now on Amazon.">
+<title>Srinivas Mullapudi — AI Product Leader &amp; Author of The AI Product Manager Gita</title>
+
+<!-- Open Graph — controls how the link renders when shared on LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srinimullapudi.com/">
+<meta property="og:site_name" content="Srinivas Mullapudi">
+<meta property="og:title" content="Srinivas Mullapudi — AI Product Leader &amp; Author of The AI Product Manager Gita">
+<meta property="og:description" content="Twenty years of enterprise platforms. Author of The AI Product Manager Gita — 18 timeless lessons from the Mahabharata for building AI products. Out now on Amazon.">
+<meta property="og:image" content="https://srinimullapudi.com/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The AI Product Manager Gita by Srinivas Mullapudi">
 <meta name="twitter:card" content="summary_large_image">
-<title>Srinivas Mullapudi — AI Product Executive</title>
+<meta name="twitter:title" content="Srinivas Mullapudi — AI Product Leader &amp; Author">
+<meta name="twitter:description" content="The AI Product Manager Gita — 18 timeless lessons from the Mahabharata for building AI products. Out now on Amazon.">
+<meta name="twitter:image" content="https://srinimullapudi.com/og-card.jpg">
+
+<!-- Structured data — lets Google show this as a book, with a buy link -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The AI Product Manager Gita: 18 Timeless Lessons from the Mahabharata for Building AI Products",
+  "author": {
+    "@type": "Person",
+    "name": "Srinivas Mullapudi",
+    "url": "https://srinimullapudi.com/",
+    "sameAs": ["https://www.linkedin.com/in/srinivasmullapudi/"]
+  },
+  "url": "https://srinimullapudi.com/aipm-gita-brochure.html",
+  "image": "https://srinimullapudi.com/aipmgita-cover.jpg",
+  "datePublished": "2026-08",
+  "inLanguage": "en",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://amzn.in/d/05wK97dp",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -28,6 +64,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/gallery.css">
 
 <style>
   :root {
@@ -194,6 +232,15 @@
     max-width: 34ch;
   }
   .lede strong { font-weight: 500; }
+
+  .creds {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-2);
+    margin-bottom: 30px;
+    max-width: 60ch;
+  }
+  .creds b { font-weight: 500; color: var(--text); }
   .lede em {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
@@ -605,8 +652,9 @@
     from { opacity: 0; transform: translateY(14px); }
     to   { opacity: 1; transform: none; }
   }
-  .hero-head, .lede, .now, .status, .contact, .proof { animation: rise .6s cubic-bezier(.2,.7,.3,1) both; }
+  .hero-head, .lede, .creds, .now, .status, .contact, .proof { animation: rise .6s cubic-bezier(.2,.7,.3,1) both; }
   .lede    { animation-delay: .06s; }
+  .creds   { animation-delay: .09s; }
   .now     { animation-delay: .12s; }
   .status  { animation-delay: .17s; }
   .contact { animation-delay: .21s; }
@@ -763,24 +811,31 @@
       <div class="portrait-fallback" id="pf">SM</div>
       <div>
         <h1>Srinivas <em>Mullapudi</em></h1>
-        <div class="role">Product leader and builder · Career coach and mentor</div>
+        <div class="role">AI product leader · Author · Career coach and mentor</div>
       </div>
     </div>
 
     <p class="lede">
-      I don't just spec AI — <strong>I ship it, write about it, and build with it.</strong>
-      Twenty years of enterprise platforms, and I still open the editor myself.
+      <strong>I write about AI products, then go build them.</strong>
+    </p>
+
+    <p class="creds">
+      Director PM at <b>Highspot</b> (GTM &amp; Deal Agents, 10x latency reduction) ·
+      VP Product at <b>Innovapptive</b> (2× cARR in 12 months) ·
+      six years at <b>e2open</b> · ISB MBA.
     </p>
 
     <p class="now">
       <span class="now-l">Now</span>
-      Writing, building, and talking to teams about their next AI product. Coaching and building careers.
+      <em>The AI Product Manager Gita</em> is out on Amazon. Coaching product leaders, and helping
+      US teams stand up product hubs in India that own outcomes.
     </p>
 
     <div class="status"><span class="dot"></span> Open to Director / VP Product and Head of AI roles in India and the US</div>
 
     <div class="btn-row">
-      <a class="btn" href="/Srinivas_Mullapudi_Resume.pdf" download>Download résumé</a>
+      <a class="btn" href="https://amzn.in/d/05wK97dp" target="_blank" rel="noopener">Buy the book</a>
+      <a class="btn btn-ghost" href="/Srinivas_Mullapudi_Resume.pdf" download>Download résumé</a>
       <a class="btn btn-ghost" href="https://calendly.com/srini_mullapudi" target="_blank" rel="noopener">Book a call</a>
     </div>
 
@@ -875,18 +930,19 @@
 <!-- ═══════════ THE AI PM GITA (BOOK) ═══════════ -->
 <section id="Gita">
   <div class="wrap">
-    <div class="kicker">The AI PM Gita <span class="sp"></span><span class="kick-note">Book · in progress</span></div>
+    <div class="kicker">The AI Product Manager Gita <span class="sp"></span><span class="kick-note">Out now on Amazon</span></div>
 
     <div class="gita">
-      <a class="gita-cover" href="/aipm-gita-brochure.html">
-        <img src="/aipmgita-cover.jpg" alt="The AI PM Gita — 18 lessons on building AI products, drawn from the Mahabharata" loading="lazy">
+      <a class="gita-cover" href="https://amzn.in/d/05wK97dp" target="_blank" rel="noopener">
+        <img src="/aipmgita-cover.jpg" alt="The AI Product Manager Gita — 18 timeless lessons from the Mahabharata for building AI products" loading="lazy">
       </a>
       <div class="gita-body">
-        <div class="book-tag">Timeless wisdom · Modern products</div>
+        <div class="book-tag">18 Timeless Lessons from the Mahabharata for Building AI Products</div>
         <p class="book-blurb">
-          The Mahabharata isn't just a story of war — it's a manual for choices. <em>The AI PM Gita</em>
-          translates <b>18 parvas into 18 lessons</b> for building AI products that create impact, earn
-          trust, and endure — each one tested against real production failures.
+          The Mahabharata isn't just a story of war — it's a manual for choices.
+          <em>The AI Product Manager Gita</em> translates <b>18 parvas into 18 lessons</b> for building
+          AI products that create impact, earn trust, and endure — each one tested against real
+          production failures.
         </p>
       </div>
     </div>
@@ -909,7 +965,30 @@
       <blockquote class="pullquote">"The model learned to please, not to help. Nobody files a bug report that says 'the AI was too agreeable.' That's what makes sycophancy the most dangerous failure of all."</blockquote>
     </div>
 
-    <a class="more" href="/aipm-gita-brochure.html">Know more about the book →</a>
+    <div class="btn-row" style="margin-top:26px">
+      <a class="btn" href="https://amzn.in/d/05wK97dp" target="_blank" rel="noopener">Buy on Amazon</a>
+      <a class="btn btn-ghost" href="/aipm-gita-brochure.html">See the 18 parvas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ THE LAUNCH — gallery ═══════════ -->
+<section id="gallery" class="gallery-section">
+  <div class="wrap">
+    <div class="kicker">The launch <span class="sp"></span><span class="kick-note">RCM Bangalore · August 2026</span></div>
+
+    <p class="gt-intro">
+      Regional College of Management, Bangalore hosted the book launch and signing, with
+      <b>Dr. S. R. Mandal</b> (IIT Roorkee, IIT Dhanbad) as Chief Guest — a room of students and
+      faculty, and a long conversation about what the Mahabharata has to say about shipping AI.
+    </p>
+
+    <div class="gallery-wrap">
+      <div id="galleryTrack" class="gallery-track"><!-- slides injected by /assets/gallery.js --></div>
+      <button type="button" id="galleryPrev" class="gallery-nav prev" aria-label="Previous">&lsaquo;</button>
+      <button type="button" id="galleryNext" class="gallery-nav next" aria-label="Next">&rsaquo;</button>
+      <div id="galleryDots" class="gallery-dots"></div>
+    </div>
   </div>
 </section>
 
@@ -918,7 +997,7 @@
   <div class="wrap">
     <div class="kicker">Ground Truth <span class="sp"></span><a href="https://vasumullapudi.substack.com" target="_blank" rel="noopener">vasumullapudi.substack.com →</a></div>
 
-    <p class="gt-intro">Field notes on AI product management, GTM, agentic systems, and the business behind the hype. Many topics, roughly weekly — the AI PM Gita chapters publish here too.</p>
+    <p class="gt-intro">Field notes on AI product management, GTM, agentic systems, and the business behind the hype. Many topics, roughly weekly — the Gita chapters publish here too.</p>
 
     <div class="essays">
       <!-- Fallback if /api/posts is unreachable. Replaced live by posts.js. -->
@@ -981,15 +1060,15 @@
       <!-- To add an event: copy one <a class="event"> block below and edit the thumbnail, title, date, tag and text.
            Tag options: <span class="event-tag upcoming">Upcoming</span> or <span class="event-tag past">Past</span> -->
 
-      <a class="event" href="/aipm-gita-brochure.html">
-        <div class="event-thumb"><img src="/aipmgita-cover.jpg" alt="The AI PM Gita — book cover" loading="lazy"></div>
+      <a class="event" href="https://amzn.in/d/05wK97dp" target="_blank" rel="noopener">
+        <div class="event-thumb"><img src="/aipmgita-cover.jpg" alt="The AI Product Manager Gita — book cover" loading="lazy"></div>
         <div class="event-body">
           <div class="event-top">
-            <div class="event-t">The AI PM Gita — Book Launch</div>
-            <span class="event-tag upcoming">Upcoming</span>
+            <div class="event-t">The AI Product Manager Gita — published</div>
+            <span class="event-tag past">Out now</span>
           </div>
-          <div class="event-meta">20 August 2026</div>
-          <div class="event-d">Launch of the book: 18 parvas on building AI products, drawn from the Mahabharata.</div>
+          <div class="event-meta">August 2026 · Amazon</div>
+          <div class="event-d">18 timeless lessons from the Mahabharata for building AI products — each one tested against real production failures.</div>
         </div>
       </a>
 
@@ -997,11 +1076,11 @@
         <div class="event-thumb thumb-dark"><img src="/rcmb-header-logo.svg" alt="Regional College of Management, Bangalore" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','RCM')"></div>
         <div class="event-body">
           <div class="event-top">
-            <div class="event-t">Orientation Session · RCM Bangalore</div>
-            <span class="event-tag upcoming">Upcoming</span>
+            <div class="event-t">Book launch &amp; signing · RCM Bangalore</div>
+            <span class="event-tag past">Past</span>
           </div>
-          <div class="event-meta">19–20 August 2026</div>
-          <div class="event-d">Sessions for the incoming cohort at Regional College of Management, Bangalore, on building a career in AI product management.</div>
+          <div class="event-meta">August 2026</div>
+          <div class="event-d">Regional College of Management, Bangalore hosted the launch and signing ceremony, with Dr. S. R. Mandal (IIT Roorkee, IIT Dhanbad) as Chief Guest, in front of students and faculty.</div>
         </div>
       </a>
 
@@ -1142,5 +1221,7 @@
   })();
 </script>
 
+<script src="/assets/media.js"></script>
+<script src="/assets/gallery.js" defer></script>
 </body>
 </html>

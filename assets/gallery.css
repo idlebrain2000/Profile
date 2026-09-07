@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Launch gallery carousel — srinimullapudi.com
+   Inherits the site's existing tokens (--green, --bg-2, --rule, --text-2…)
+   and its type stack (DM Serif Display / Outfit / DM Mono). No dependencies.
+   ========================================================================== */
+
+.gallery-wrap { position: relative; margin-top: 26px; }
+
+.gallery-track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 14px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-track:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; border-radius: 4px; }
+
+/* --- slides -------------------------------------------------------------- */
+
+.gslide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: min(80vw, 440px);
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+
+.gslide img,
+.gslide video,
+.gslide iframe {
+  display: block;
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+  border: 0;
+  background: #14140F;
+}
+
+.gslide figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+  padding: 12px 14px;
+}
+
+/* --- controls ------------------------------------------------------------ */
+
+.gallery-nav {
+  position: absolute;
+  top: 100px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, transform .15s;
+}
+
+.gallery-nav:hover { color: var(--green); border-color: var(--green); }
+.gallery-nav:active { transform: scale(.94); }
+.gallery-nav:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.gallery-nav.prev { left: -14px; }
+.gallery-nav.next { right: -14px; }
+
+.gallery-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.gallery-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rule);
+  cursor: pointer;
+  transition: background .18s, width .18s, border-radius .18s;
+}
+
+.gallery-dot[aria-current="true"] {
+  background: var(--green);
+  width: 18px;
+  border-radius: 3px;
+}
+
+.gallery-dot:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+/* --- responsive & motion ------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .gallery-nav { display: none; }        /* swipe instead */
+  .gslide img, .gslide video, .gslide iframe { height: 200px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track { scroll-behavior: auto; }
+  .gallery-nav, .gallery-dot { transition: none; }
+}
